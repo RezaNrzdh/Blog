@@ -1,0 +1,100 @@
+@mixin navButton {
+    display: flex;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    color: $text-main;
+    padding: 0 16px;
+    transition: all ease-in-out 0.3s;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2px;
+        width: 12%;
+        opacity: 0;
+        background-color: $primary-main;
+        transition: all ease-in-out 0.2s;
+    }
+    &:hover{
+        color: $primary-main;
+        &::after{
+            width: 32%;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin FilledButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    color: $text-contrast;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    background-color: $primary-main;
+    font-size: 14px;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+@mixin DisableFilledButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    color: $text-variant;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    background-color: $stroke-main;
+    font-size: 14px;
+    cursor: default !important;
+}
+
+@mixin OutlinedButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: 1px solid $stroke-main;
+    color: $text-variant;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    font-size: 14px;
+    &:hover{
+        color: $text-contrast;
+        background-color: $primary-main;
+        border-color: $primary-main;
+    }
+}
+
+@mixin GhostButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    color: $text-main;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    font-size: 14px;
+    &:hover{
+        color: $primary-main;
+        background-color: $primary-light;
+    }
+}

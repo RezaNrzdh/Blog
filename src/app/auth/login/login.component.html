@@ -1,0 +1,23 @@
+<section>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <h1>ورود به سایت</h1>
+        <div class="textboxContainer">
+            <label>ایمیل</label>
+            <input type="email" name="email" maxlength="45" ngModel required #email="ngModel" />
+        </div>
+        <span class="alertmessage" *ngIf="email.invalid && email.touched">لطفا آدرس ایمیل را وارد کنید.</span>
+        <div class="textboxContainer passwordContainer">
+            <label>رمز عبور</label>
+            <input type="password" name="password" maxlength="24" ngModel required #pass="ngModel" />
+        </div>
+        <span class="alertmessage" *ngIf="pass.invalid && pass.touched">لطفا رمز عبور را وارد کنید.</span>
+        <label class="rememberme">
+            <input type="checkbox" checked />
+            <span></span>
+            <label>مرا به خاطر بسپار</label>
+        </label>
+        <button type="submit" [disabled]="form.invalid || form.untouched">ورود</button>
+        <a>رمز عبورتو فراموش کردی؟</a>
+    </form>
+</section>
+<span class="underbox"></span>

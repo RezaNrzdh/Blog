@@ -1,0 +1,9 @@
+@mixin OutlinedTextbox {
+    display: flex;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid $stroke-main;
+    border-radius: 12px;
+    outline: none;
+    text-indent: 16px;
+}

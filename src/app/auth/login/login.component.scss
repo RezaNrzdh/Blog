@@ -1,0 +1,123 @@
+@import '/src/styles/color';
+@import '/src/styles/textbox';
+@import '/src/styles/buttons';
+
+section{
+    display: flex;
+    position: relative;
+    margin: 96px auto 0 auto;
+    width: 400px;
+    padding: 32px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: $surface-main;
+    box-shadow: 0 24px 32px rgba(0,0,0,0.08);
+    z-index: 2;
+    form{
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+    }
+    h1{
+        font-size: 18px;
+        margin-bottom: 32px;
+        color: $text-main
+    }
+    .textboxContainer{
+        display: flex;
+        flex-direction: column;
+        label{
+            color: $text-variant;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        input{
+            @include OutlinedTextbox;
+        }
+        input.ng-invalid.ng-touched {
+            border-color: $danger-main;
+        }
+    }
+    .alertmessage {
+        font-size: 12px;
+        margin-top: 2px;
+        margin-right: 16px;
+        color: $danger-main;
+    }
+    .passwordContainer{
+        margin-top: 16px;
+    }
+    .rememberme {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        label{
+            font-size: 12px;
+            color: $text-variant;
+            margin-right: 8px;
+        }
+        input{
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+            &:checked ~ span{
+                background-color: $success-main;
+                border-color: $success-main;
+            }
+        }
+        span{
+            position: relative;
+            box-sizing: border-box;
+            cursor: pointer;
+            top:0;
+            right: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: 2px solid $stroke-main;
+            &:hover{
+                border-color: $success-main;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 6px;
+                width: 8px;
+                height: 12px;
+                box-sizing: border-box;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    button{
+        @include FilledButton;
+    }
+    button[disabled]{
+        @include DisableFilledButton;
+    }
+    a{
+        font-size: 12px;
+        color: $text-variant;
+        margin: 16px auto 0 auto;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+span.underbox{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 360px;
+    height: 16px;
+    border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
+    background-color: $surface-main;
+    z-index: 0;
+}
