@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'blog-login',
   templateUrl: './login.component.html',
+  host: {'class': 'PageContainer'},
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {

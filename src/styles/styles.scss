@@ -24,6 +24,12 @@ button {
     font-family: VazirMatnFont;
 }
 
+.PageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 @font-face {
     font-family: VazirMatnFont;
     src: url('/assets/fonts/Vazirmatn-UI-FD-Light.ttf') format('ttf');
