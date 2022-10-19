@@ -109,3 +109,55 @@ section{
         }
     }
 }
+
+section {
+    .editor-picked {
+        display: flex;
+        width: 100%;
+        background-color: $primary-light;
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+        .editor-picked-container {
+            display: flex;
+            flex-direction: column;
+            width: 1024px;
+            height: inherit;
+            margin: auto;
+            h4 {
+                display: block;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                font-size: 24px;
+                color: $text-main;
+            }
+            .editor-picked_cards {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                grid-column-gap: 24px;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    background-color: white;
+                    img{
+                        width: inherit;
+                        height: 213px;
+                        object-fit: cover;
+                    }
+                    h3{
+                        font-size: 14px;
+                        color: $text-main;
+                        padding: 24px 24px 2px 24px;
+                    }
+                    span{
+                        font-size: 12px;
+                        color: $text-variant;
+                        padding: 2px 24px 24px 24px;
+                    }
+                }
+            }
+        }
+    }
+}

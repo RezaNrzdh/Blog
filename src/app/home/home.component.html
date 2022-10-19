@@ -7,7 +7,7 @@
             <p>{{ latestArticlesData.desc }}</p>
             <div class="author">
                 <div class="author-avatar">
-                    <img />
+                    <img src="{{ latestArticlesData.authorImg }}" />
                 </div>
                 <div class="author-details">
                     <div>{{ latestArticlesData.author }}</div>|
@@ -22,6 +22,18 @@
             <div class="recent-articles-info">
                 <h3>{{ article.title }}</h3>
                 <label>{{ article.created }}</label>
+            </div>
+        </div>
+    </div>
+    <div class="editor-picked">
+        <div class="editor-picked-container">
+            <h4>انتخاب سردبیر</h4>
+            <div class="editor-picked_cards">
+                <div *ngFor="let picked of editorPickedData">
+                    <img src="{{ picked.img }}"/>
+                    <h3>{{ picked.title }}</h3>
+                    <span>{{ picked.created }}</span>
+                </div>
             </div>
         </div>
     </div>
