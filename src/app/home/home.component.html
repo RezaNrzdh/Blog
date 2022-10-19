@@ -1,41 +1,27 @@
 <section>
     <div class="latest-articles">
-        <img src="https://tajalsahra.tours/wp-content/uploads/2022/04/m55flwylcmf0vd03bbzdumqa4bpb_1540378961_Dubai__.jpeg" />
+        <img src="{{ latestArticlesData.img }}" />
         <div class="latest-articles-info">
-            <label>10 شهریور 1401</label>
-            <h2>10 مورد از جذاب و دیدنی ترین مکان های توریستی دبی در سال 2022</h2>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</p>
+            <label>{{ latestArticlesData.created }}</label>
+            <h2>{{ latestArticlesData.title }}</h2>
+            <p>{{ latestArticlesData.desc }}</p>
             <div class="author">
                 <div class="author-avatar">
                     <img />
                 </div>
                 <div class="author-details">
-                    <div>رضا نوروززاده</div>|
-                    <div> مدت زمان مطالعه 6 دقیقه</div>
+                    <div>{{ latestArticlesData.author }}</div>|
+                    <div>{{ latestArticlesData.duration }}</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="recent-articles">
-        <div class="recent-articles-col">
-            <div class="recent-articles-img"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/61/40/c2/caption.jpg?w=300&h=300" /></div>
+        <div class="recent-articles-col" *ngFor="let article of recentArticlesData">
+            <div class="recent-articles-img"><img src="{{ article.img }}" /></div>
             <div class="recent-articles-info">
-                <h3>چطور از سفر به شهر زیبای لندن لذت ببریم؟</h3>
-                <label>10 شهریور 1401</label>
-            </div>
-        </div>
-        <div class="recent-articles-col">
-            <div class="recent-articles-img"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/61/28/44/caption.jpg?w=300&h=300" /></div>
-            <div class="recent-articles-info">
-                <h3>دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید</h3>
-                <label>10 شهریور 1401</label>
-            </div>
-        </div>
-        <div class="recent-articles-col">
-            <div class="recent-articles-img"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/4a/a6/a6/caption.jpg?w=300&h=300" /></div>
-            <div class="recent-articles-info">
-                <h3>15 کار سرگرم کننده و منحصر به فرد که فقط در سن آنتونیو میتوانید انجام دهید</h3>
-                <label>10 شهریور 1401</label>
+                <h3>{{ article.title }}</h3>
+                <label>{{ article.created }}</label>
             </div>
         </div>
     </div>
