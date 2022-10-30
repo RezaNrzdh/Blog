@@ -74,7 +74,7 @@ section{
     .recent-articles{
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-        grid-column-gap: 24px;
+        grid-column-gap: 32px;
         width: 1024px;
         height: 112px;
         margin-top: 32px;
@@ -86,20 +86,30 @@ section{
                 display: block;
                 min-width: 112px;
                 height: 112px;
-                img {
-                    min-width: inherit;
+                border-radius: 16px;
+                overflow: hidden;
+                a{
                     height: inherit;
-                    object-fit: cover;
-                    border-radius: 16px;
+                    img {
+                        min-width: inherit;
+                        height: inherit;
+                        object-fit: cover;
+                        transition: all ease-in-out 0.3s;
+                        &:hover{
+                            transform: scale(1.07);
+                        }
+                    }
                 }
             }
             .recent-articles-info{
                 display: block;
                 margin-right: 16px;
-                h3{
-                    font-size: 14px;
+                a{
                     color: $text-main;
-                    margin-top: 16px;
+                    h3{
+                        margin-top: 12px;
+                        font-size: 14px;
+                    }
                 }
                 label{
                     font-size: 12px;
@@ -115,7 +125,7 @@ section {
         display: flex;
         width: 100%;
         background-color: $primary-light;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
         margin-bottom: 32px;
         .editor-picked-container {
             display: flex;
@@ -130,10 +140,10 @@ section {
                 font-size: 24px;
                 color: $text-main;
             }
-            .editor-picked_cards {
+            .editor-picked-cards {
                 display: grid;
                 grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-                grid-column-gap: 24px;
+                grid-column-gap: 32px;
                 div{
                     display: flex;
                     flex-direction: column;
@@ -141,15 +151,26 @@ section {
                     border-radius: 16px;
                     overflow: hidden;
                     background-color: white;
-                    img{
-                        width: inherit;
+                    a.editor-picked-cards-img{
+                        width: 100%;
                         height: 213px;
-                        object-fit: cover;
+                        overflow: hidden;
+                        img{
+                            width: inherit;
+                            height: 213px;
+                            object-fit: cover;
+                            transition: all ease-in-out 0.3s;
+                            &:hover{
+                                transform: scale(1.03);
+                            }                            
+                        }
                     }
-                    h3{
-                        font-size: 14px;
+                    a.editor-picked-cards-link{
                         color: $text-main;
                         padding: 24px 24px 2px 24px;
+                        h3{
+                            font-size: 14px;
+                        }
                     }
                     span{
                         font-size: 12px;
@@ -158,6 +179,41 @@ section {
                     }
                 }
             }
+        }
+    }
+}
+
+section {
+    .other-articles{
+        display: grid;
+        grid-template-columns: 672px 1fr;
+        grid-column-gap: 32px;
+        width: 1024px;
+        margin: auto;
+        padding-bottom: 32px;
+        margin-bottom: 32px;        
+        .other-articles-main{
+            display: flex;
+            flex-direction: column;
+            h2{
+                display: block;
+                margin-bottom: 24px;
+                font-size: 24px;
+                color: $text-main;
+            }
+            .other-articles-main-card{
+                display: flex;
+                width: inherit;
+                height: 192px;
+                border-radius: 16px;
+                box-sizing: border-box;
+                box-shadow: 0 16px 32px rgba(0,0,0,0.04);
+                background-color: white;
+                margin-bottom: 32px;
+            }
+        }
+        .other-articles-side {
+            background-color: bisque;
         }
     }
 }

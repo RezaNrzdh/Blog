@@ -1,26 +1,26 @@
 <section>
     <div class="latest-articles">
-        <img src="{{ latestArticlesData.img }}" />
+        <img src="{{ latestArticle.img }}" />
         <div class="latest-articles-info">
-            <label>{{ latestArticlesData.created }}</label>
-            <h2>{{ latestArticlesData.title }}</h2>
-            <p>{{ latestArticlesData.desc }}</p>
+            <label>{{ latestArticle.created }}</label>
+            <h2>{{ latestArticle.title }}</h2>
+            <p>{{ latestArticle.desc }}</p>
             <div class="author">
                 <div class="author-avatar">
-                    <img src="{{ latestArticlesData.authorImg }}" />
+                    <img src="{{ latestArticle.authorImg }}" />
                 </div>
                 <div class="author-details">
-                    <div>{{ latestArticlesData.author }}</div>|
-                    <div>{{ latestArticlesData.duration }}</div>
+                    <div>{{ latestArticle.author }}</div>|
+                    <div>{{ latestArticle.duration }}</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="recent-articles">
-        <div class="recent-articles-col" *ngFor="let article of recentArticlesData">
-            <div class="recent-articles-img"><img src="{{ article.img }}" /></div>
+        <div class="recent-articles-col" *ngFor="let article of otherLatestArticles">
+            <div class="recent-articles-img"><a routerLink=""><img src="{{ article.img }}" /></a></div>
             <div class="recent-articles-info">
-                <h3>{{ article.title }}</h3>
+                <a routerLink="" class="link"><h3>{{ article.title }}</h3></a>
                 <label>{{ article.created }}</label>
             </div>
         </div>
@@ -28,16 +28,20 @@
     <div class="editor-picked">
         <div class="editor-picked-container">
             <h4>انتخاب سردبیر</h4>
-            <div class="editor-picked_cards">
-                <div *ngFor="let picked of editorPickedData">
-                    <img src="{{ picked.img }}"/>
-                    <h3>{{ picked.title }}</h3>
+            <div class="editor-picked-cards">
+                <div *ngFor="let picked of editorPicked">
+                    <a class="editor-picked-cards-img"><img src="{{ picked.img }}"/></a>
+                    <a routerLink="" class="link editor-picked-cards-link"><h3>{{ picked.title }}</h3></a>
                     <span>{{ picked.created }}</span>
                 </div>
             </div>
         </div>
     </div>
     <div class="other-articles">
-
+        <div class="other-articles-main">
+            <h2>آخرین مقالات</h2>
+            <div *ngFor="let recent of recentArticles" class="other-articles-main-card">s</div>
+        </div>
+        <div class="other-articles-side">B</div>
     </div>
 </section>

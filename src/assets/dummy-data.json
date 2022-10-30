@@ -1,0 +1,71 @@
+{
+    "latestArticle": {
+        "img": "/assets/images/latest.jpg",
+        "title": "10 مورد از جذاب و دیدنی ترین مکان های توریستی دبی در سال 2022",
+        "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+        "authorImg": "/assets/images/author.jpg",
+        "author": "رضا نوروززاده",
+        "duration": "مدت زمان مطالعه 6 دقیقه",
+        "created": "10 شهریور 1401"
+    },
+    "otherLatestArticles": [
+        {
+            "img": "/assets/images/recent_1_300.jpg",
+            "title": "چطور از سفر به شهر زیبای لندن لذت ببریم؟",
+            "created": "9 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/recent_2_300.jpg",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
+            "created": "8 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/recent_3_300.jpg",
+            "title": "15 کار سرگرم کننده و منحصر به فرد که فقط در سن آنتونیو میتوانید انجام دهید",
+            "created": "7 شهریور 1401"
+        }
+    ],
+    "editorPicked": [
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "تمام طعم های جهان در یک شهر، نیویورک",
+            "created": "17 دی 1400"
+        },
+        {
+            "img": "/assets/images/picked_2_400.jpg",
+            "title": "جنوب اسپانیا رویایی ترین مناظر پاییزی",
+            "created": "1 مهر 1400"
+        },
+        {
+            "img": "/assets/images/picked_3_400.jpg",
+            "title": "9 جشنواره بی نظیر و شگفت انگیز در آمریکا",
+            "created": "23 مرداد 1401"
+        }
+    ],
+    "recentArticles": [
+        {
+            "img": "",
+            "title": "",
+            "author": "",
+            "created": ""
+        },
+        {
+            "img": "",
+            "title": "",
+            "author": "",
+            "created": ""
+        },
+        {
+            "img": "",
+            "title": "",
+            "author": "",
+            "created": ""
+        },
+        {
+            "img": "",
+            "title": "",
+            "author": "",
+            "created": ""
+        }
+    ]
+}

@@ -19,6 +19,12 @@ a{
     text-decoration: none;
 }
 
+a.link {
+    &:hover{
+        color: $primary-main !important;
+    }
+}
+
 button {
     cursor: pointer;
     font-family: VazirMatnFont;
