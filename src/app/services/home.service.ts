@@ -18,4 +18,8 @@ export class HomeService {
     getRecentArticles = () => {
         return data.recentArticles;
     }
+
+    getPopularArticles = ( ) => {
+        return data.popularArticles;
+    }
 }

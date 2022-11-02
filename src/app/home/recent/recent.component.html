@@ -1,0 +1,22 @@
+<div class="other-articles">
+    <div class="other-articles-main">
+        <h2>آخرین مقالات</h2>
+        <div *ngFor="let recent of recentArticles" class="other-articles-main-card">
+            <div class="oamc-img"><img src="{{ recent.img }}" /></div>
+            <div class="oamc-info">
+                <h3>{{ recent.title }}</h3>
+                <div class="oamc-author">
+                    <img src="{{ recent.authorImg }}" />
+                    <span>{{ recent.author }}</span> |
+                    <span>{{ recent.created }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popular-articles">
+        <div class="header">
+            <h3>مقالات پربازدید</h3>
+            <span></span>
+        </div>
+    </div>
+</div>

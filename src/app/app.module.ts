@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HomeModule } from './home/home.module';
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -19,7 +20,6 @@ import { TextboxComponent } from './shared/textbox/textbox.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ArticleComponent,
     ContactComponent,
     AboutComponent,
@@ -34,6 +34,7 @@ import { TextboxComponent } from './shared/textbox/textbox.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HomeModule,
     RoutingModule
   ],
   providers: [],

@@ -44,28 +44,54 @@
     ],
     "recentArticles": [
         {
-            "img": "",
-            "title": "",
-            "author": "",
-            "created": ""
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "6 شهریور 1401"
         },
         {
-            "img": "",
-            "title": "",
-            "author": "",
-            "created": ""
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "5 شهریور 1401"
         },
         {
-            "img": "",
-            "title": "",
-            "author": "",
-            "created": ""
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "4 شهریور 1401"
         },
         {
-            "img": "",
-            "title": "",
-            "author": "",
-            "created": ""
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "3 شهریور 1401"
         }
+    ],
+    "popularArticles": [
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "created": "4 شهریور 1401"            
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "created": "4 شهریور 1401"            
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "created": "4 شهریور 1401"            
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "created": "4 شهریور 1401"            
+        }                        
     ]
 }

@@ -1,0 +1,26 @@
+<div class="latest-articles">
+    <img src="{{ latestArticle.img }}" />
+    <div class="latest-articles-info">
+        <label>{{ latestArticle.created }}</label>
+        <h2>{{ latestArticle.title }}</h2>
+        <p>{{ latestArticle.desc }}</p>
+        <div class="author">
+            <div class="author-avatar">
+                <img src="{{ latestArticle.authorImg }}" />
+            </div>
+            <div class="author-details">
+                <div>{{ latestArticle.author }}</div>|
+                <div>{{ latestArticle.duration }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="recent-articles">
+    <div class="recent-articles-col" *ngFor="let article of otherLatestArticles">
+        <div class="recent-articles-img"><a routerLink=""><img src="{{ article.img }}" /></a></div>
+        <div class="recent-articles-info">
+            <a routerLink="" class="link"><h3>{{ article.title }}</h3></a>
+            <label>{{ article.created }}</label>
+        </div>
+    </div>
+</div>

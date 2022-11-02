@@ -1,4 +1,5 @@
 @import '/src/styles/color';
+@import '/src/styles/variables';
 
 footer{
     display: flex;
@@ -12,7 +13,7 @@ footer{
         width: 1280px;
         margin: 0 auto;
         span {
-            font-size: 12px;
+            font-size: $caption;
             color: $text-variant;
             margin: 0 auto auto auto;
         }

@@ -1,0 +1,110 @@
+@import '/src/styles/color';
+@import '/src/styles/variables';
+
+.latest-articles{
+    display: flex;
+    box-sizing: border-box;
+    width: 1024px;
+    height: 450px;
+    margin: 32px auto 0 auto;
+    img {
+        display: flex;
+        min-width: 450px;
+        height: 450px;
+        border-radius: $radius-16;
+        object-fit: cover;
+    }
+    .latest-articles-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 32px;
+        label {
+            font-size: $caption;
+            color: $text-variant;
+            margin-top: 80px;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: $headline1;
+            color: $text-main;
+        }
+        p {
+            font-size: $body2;
+            color: $text-main;
+        }
+    }
+    .author{
+        display: flex;
+        width: 100%;
+        margin-top:16px;
+        align-items: center;
+        .author-avatar {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-color: $primary-main;
+            border-radius: $radius-28;
+            img{
+                display: block;
+                min-width: inherit;
+                height: inherit;
+            }
+        }
+        .author-details {
+            display: flex;
+            color: $text-variant;
+            font-size: $body2;
+            div{
+                margin: 0 8px;
+            }
+        }
+    }
+}
+
+.recent-articles{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-column-gap: 32px;
+    width: 1024px;
+    height: 112px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    .recent-articles-col{
+        display: flex;
+        box-sizing: border-box;
+        .recent-articles-img{
+            display: block;
+            min-width: 112px;
+            height: 112px;
+            border-radius: $radius-16;
+            overflow: hidden;
+            a{
+                height: inherit;
+                img {
+                    min-width: inherit;
+                    height: inherit;
+                    object-fit: cover;
+                    transition: all ease-in-out 0.3s;
+                    &:hover{
+                        transform: scale(1.07);
+                    }
+                }
+            }
+        }
+        .recent-articles-info{
+            display: block;
+            margin-right: 16px;
+            a{
+                color: $text-main;
+                h3{
+                    margin-top: 12px;
+                    font-size: $body2;
+                }
+            }
+            label{
+                font-size: $caption;
+                color: $text-variant;
+            }
+        }
+    }
+}

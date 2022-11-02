@@ -1,0 +1,63 @@
+@import '/src/styles/color';
+@import '/src/styles/variables';
+
+.editor-picked {
+    display: flex;
+    width: 100%;
+    background-color: $primary-light;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    .editor-picked-container {
+        display: flex;
+        flex-direction: column;
+        width: 1024px;
+        height: inherit;
+        margin: auto;
+        h4 {
+            display: block;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: $headline3;
+            color: $text-main;
+        }
+        .editor-picked-cards {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            grid-column-gap: 32px;
+            div{
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                border-radius: $radius-16;
+                overflow: hidden;
+                background-color: white;
+                a.editor-picked-cards-img{
+                    width: 100%;
+                    height: 213px;
+                    overflow: hidden;
+                    img{
+                        width: inherit;
+                        height: 213px;
+                        object-fit: cover;
+                        transition: all ease-in-out 0.3s;
+                        &:hover{
+                            transform: scale(1.03);
+                        }                            
+                    }
+                }
+                a.editor-picked-cards-link{
+                    color: $text-main;
+                    padding: 24px 24px 2px 24px;
+                    h3{
+                        font-size: $body2;
+                    }
+                }
+                span{
+                    font-size: $caption;
+                    color: $text-variant;
+                    padding: 2px 24px 24px 24px;
+                }
+            }
+        }
+    }
+}

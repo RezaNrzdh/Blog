@@ -1,0 +1,12 @@
+<div class="editor-picked">
+    <div class="editor-picked-container">
+        <h4>انتخاب سردبیر</h4>
+        <div class="editor-picked-cards">
+            <div *ngFor="let picked of editorPicked">
+                <a class="editor-picked-cards-img"><img src="{{ picked.img }}"/></a>
+                <a routerLink="" class="link editor-picked-cards-link"><h3>{{ picked.title }}</h3></a>
+                <span>{{ picked.created }}</span>
+            </div>
+        </div>
+    </div>
+</div>
