@@ -15,8 +15,15 @@
     </div>
     <div class="popular-articles">
         <div class="header">
-            <h3>مقالات پربازدید</h3>
+            <h4>مقالات پربازدید</h4>
             <span></span>
+        </div>
+        <div *ngFor="let popular of popularArticles" class="card">
+            <img src="{{ popular.img }}" />
+            <div class="info">
+                <h3>{{ popular.title }}</h3>
+                <span>{{ popular.created }}</span>
+            </div>
         </div>
     </div>
 </div>
