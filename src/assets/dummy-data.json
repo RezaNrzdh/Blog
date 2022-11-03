@@ -70,27 +70,60 @@
             "authorImg": "/assets/images/author.jpg",            
             "author": "رضا نوروززاده",
             "created": "3 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "3 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "3 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "3 شهریور 1401"
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "authorImg": "/assets/images/author.jpg",            
+            "author": "رضا نوروززاده",
+            "created": "3 شهریور 1401"
         }
     ],
     "popularArticles": [
         {
             "img": "/assets/images/picked_1_400.jpg",
-            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
             "created": "4 شهریور 1401"            
         },
         {
             "img": "/assets/images/picked_1_400.jpg",
-            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
             "created": "4 شهریور 1401"            
         },
         {
             "img": "/assets/images/picked_1_400.jpg",
-            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
             "created": "4 شهریور 1401"            
         },
         {
             "img": "/assets/images/picked_1_400.jpg",
-            "title": "لورم_ایپسوم_دالر_اسمیت",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
+            "created": "4 شهریور 1401"            
+        },
+        {
+            "img": "/assets/images/picked_1_400.jpg",
+            "title": "دیدنی ترین مکان هایی که میتوانید در ماه دسامبر به آنجا بروید",
             "created": "4 شهریور 1401"            
         }                        
     ]
