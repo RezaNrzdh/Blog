@@ -4,6 +4,10 @@
 .main{
     display: flex;
     flex-direction: column;
+    span{
+        font-size: $body2;
+        color: $text-variant;
+    }
     img{
         width: 100%;
         border-radius: $radius-16;
@@ -11,8 +15,12 @@
     h1{
         font-size: $headline1;
         color: $text-main;
+        margin-bottom: 24px;
     }
-}
-.side{
-
+    .desc{
+        font-size: $body1;
+        color: $text-main;
+        margin-top: 32px;
+        line-height: 32px;
+    }
 }

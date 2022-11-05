@@ -6,4 +6,7 @@ export class ArticleService {
     getArticle = () => {
         return data.article;
     }
+    getPopularArticles = ( ) => {
+        return data.popularArticles;
+    }
 }
