@@ -7,7 +7,9 @@ interface Article {
     author: string;
     authorImg: string;
     created: string;
+    duration: string;
     desc: string;
+    tags: Array<string>
 }
 
 @Component({
@@ -16,7 +18,7 @@ interface Article {
     styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-    article: Article = { img: '', title: '', author: '', authorImg: '', created: '', desc: '' };
+    article: Article = { img: '', title: '', author: '', authorImg: '', created: '', duration: '', desc: '', tags: [] };
     
     constructor(private articleService: ArticleService){}
 

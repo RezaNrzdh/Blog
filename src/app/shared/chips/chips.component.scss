@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+@import '../../../styles/color';
+
+.chips{
+    display: flex;
+    font-size: $body2;
+    color: white;
+    background-color: $primary-main;
+    padding: 4px 12px;
+    border-radius: $radius-16;
+    margin-left: 8px;
+}

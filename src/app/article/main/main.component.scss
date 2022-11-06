@@ -12,6 +12,19 @@
         width: 100%;
         border-radius: $radius-16;
     }
+    .author{
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: $radius-16;
+        }
+        span{
+            margin-right: 12px;
+        }
+    }
     h1{
         font-size: $headline1;
         color: $text-main;
@@ -22,5 +35,12 @@
         color: $text-main;
         margin-top: 32px;
         line-height: 32px;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+        border-bottom: 1px solid $stroke-main;
+    }
+    .tags{
+        display: flex;
+        margin-bottom: 32px;
     }
 }

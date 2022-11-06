@@ -2,10 +2,17 @@
     <span>{{ article.created }}</span>
     <h1>{{ article.title }}</h1>
     <img src="{{ article.img }}" />
+    <div class="author">
+        <img src="{{ article.authorImg }}" />
+        <span>{{ article.author }} | {{ article.duration }}</span>
+    </div>
     <div class="desc">
         {{ article.desc }}
         <blockquote>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</blockquote>
         <h3>لورم ایپسوم متن ساختگی</h3>
         {{ article.desc }}
+    </div>
+    <div class="tags">
+        <blog-chips *ngFor="let chip of article.tags" [value]="chip"></blog-chips>
     </div>
 </div>

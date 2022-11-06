@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RoutingModule } from './routing.module';
 import { ButtonComponent } from './shared/button/button.component';
 import { TextboxComponent } from './shared/textbox/textbox.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TextboxComponent } from './shared/textbox/textbox.component';
     BrowserModule,
     FormsModule,
     HomeModule,
+    SharedModule,
     ArticleModule,
     RoutingModule
   ],
