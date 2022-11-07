@@ -1,0 +1,52 @@
+@import '../../../../styles/color';
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    font-size: 14px;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+
+.primary{
+    background-color: $primary-main;
+    color: $text-contrast;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+.secondary{
+    background-color: $secondary-main;
+    color: $text-contrast;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+.success{
+    background-color: $success-main;
+    color: $text-contrast;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+.danger{
+    background-color: $danger-main;
+    color: $text-contrast;
+    &:hover{
+        background-color: $text-main;
+    }
+}
+.info{
+
+}
+.warning{
+
+}

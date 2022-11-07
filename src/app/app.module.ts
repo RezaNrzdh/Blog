@@ -14,7 +14,6 @@ import { ForgetComponent } from './auth/forget/forget.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RoutingModule } from './routing.module';
-import { ButtonComponent } from './shared/button/button.component';
 import { TextboxComponent } from './shared/textbox/textbox.component';
 import { SharedModule } from './shared/shared.module';
 
@@ -28,7 +27,6 @@ import { SharedModule } from './shared/shared.module';
     ForgetComponent,
     HeaderComponent,
     FooterComponent,
-    ButtonComponent,
     TextboxComponent
   ],
   imports: [
