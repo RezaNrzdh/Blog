@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'blog-outlined-button',
@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./outlinedButton.component.scss']
 })
 export class OutlinedButtonComponent {
-
+    @Input() value: string = 'click';
+    @Input() color: string = 'primary';
 }

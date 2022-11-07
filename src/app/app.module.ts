@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RoutingModule } from './routing.module';
 import { TextboxComponent } from './shared/textbox/textbox.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SharedModule } from './shared/shared.module';
     HomeModule,
     SharedModule,
     ArticleModule,
-    RoutingModule
+    RoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
