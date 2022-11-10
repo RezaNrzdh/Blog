@@ -7,6 +7,7 @@ import { ChipsComponent } from "./components/chips/chips.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { TextboxComponent } from "./components/textbox/textbox.component";
+import { FilledButtonDirective } from "./directives/filled-button.directive";
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { TextboxComponent } from "./components/textbox/textbox.component";
         FooterComponent,
         ChipsComponent,
         TextboxComponent,
-        CardGridComponent
+        CardGridComponent,
+        FilledButtonDirective
     ],
     imports: [
         CommonModule,
@@ -25,7 +27,8 @@ import { TextboxComponent } from "./components/textbox/textbox.component";
         FooterComponent,
         ChipsComponent,
         TextboxComponent,
-        CardGridComponent
+        CardGridComponent,
+        FilledButtonDirective
     ]
 })
 export class SharedModule{}
