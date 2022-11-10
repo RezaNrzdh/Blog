@@ -1,0 +1,12 @@
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/color';
+
+:host{
+    display: flex;
+    font-size: $body2;
+    color: white;
+    background-color: $primary-main;
+    padding: 4px 12px;
+    border-radius: $radius-16;
+    margin-left: 8px;
+}

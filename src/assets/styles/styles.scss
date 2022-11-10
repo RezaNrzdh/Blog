@@ -1,0 +1,90 @@
+@import 'color';
+@import 'variables';
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    direction: rtl;
+    background-color: $background-main;
+    font-family: VazirMatnFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.link {
+    &:hover{
+        color: $primary-main !important;
+    }
+}
+
+button {
+    cursor: pointer;
+    font-family: VazirMatnFont;
+}
+
+blockquote{
+    margin: 24px 0 24px 0;
+    padding: 40px;
+    border: 1px solid rgba(255,131,100, 0.3);
+    border-radius: $radius-16;
+    background-color: $primary-light;
+    color: $text-variant;
+}
+
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;        
+}    
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;        
+}
+@font-face {
+    font-family: VazirMatnFont;
+    src: url('/assets/fonts/Vazirmatn-UI-FD-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;        
+}
