@@ -1,0 +1,23 @@
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/color';
+
+:host{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    color: $text-contrast;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    background-color: $primary-main;
+    font-size: 14px;
+    &:hover{
+        background-color: $text-main;
+    }
+    .primary{
+
+    }
+}

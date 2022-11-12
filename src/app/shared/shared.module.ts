@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RoutingModule } from "../routing.module";
+import { ButtonComponent } from "./components/button/button.component";
 
 import { CardGridComponent } from "./components/card-grid/card-grid.component";
 import { ChipsComponent } from "./components/chips/chips.component";
@@ -16,7 +17,8 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
         ChipsComponent,
         TextboxComponent,
         CardGridComponent,
-        FilledButtonDirective
+        FilledButtonDirective,
+        ButtonComponent
     ],
     imports: [
         CommonModule,
@@ -28,7 +30,8 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
         ChipsComponent,
         TextboxComponent,
         CardGridComponent,
-        FilledButtonDirective
+        FilledButtonDirective,
+        ButtonComponent
     ]
 })
 export class SharedModule{}
