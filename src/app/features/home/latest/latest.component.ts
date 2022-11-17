@@ -10,7 +10,7 @@ import { OtherLastetArticles } from 'src/app/core/models/otherLatestArticles.mod
 
 })
 export class LatestComponent implements OnInit {
-    lastone: any;
+    lastone: any = [];
     articles: any = [];
 
     otherLatestArticles: Array<OtherLastetArticles> = [];
@@ -20,7 +20,13 @@ export class LatestComponent implements OnInit {
     ngOnInit(): void {
         this.homeService.getLatestArticle()
         .subscribe(res => {
-            console.log(res);
+            this.lastone = res;
+            this.lastone.map((r: any,i: number) => {
+                if(i > 0)
+                   this.articles.push(r);
+            });
+            console.log(this.lastone);
+            console.log(this.articles);
         });
     }
 }
