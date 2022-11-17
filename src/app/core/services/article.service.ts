@@ -9,4 +9,5 @@ export class ArticleService {
     getPopularArticles = ( ) => {
         return data.popularArticles;
     }
+    
 }

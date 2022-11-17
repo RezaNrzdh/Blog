@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HomeService } from 'src/app/core/services/home.service';
 
-import { LatestArticle } from 'src/app/core/models/latestArticle.model';
 import { OtherLastetArticles } from 'src/app/core/models/otherLatestArticles.model';
 
 @Component({
@@ -11,13 +10,17 @@ import { OtherLastetArticles } from 'src/app/core/models/otherLatestArticles.mod
 
 })
 export class LatestComponent implements OnInit {
-    latestArticle: LatestArticle = { img: '', title: '', desc: '', authorImg: '', author: '', duration: '', created: '' };
+    lastone: any;
+    articles: any = [];
+
     otherLatestArticles: Array<OtherLastetArticles> = [];
 
     constructor(private homeService: HomeService){}
     
     ngOnInit(): void {
-        this.latestArticle = this.homeService.getLatestArticle();
-        this.otherLatestArticles = this.homeService.getOtherLatestArticles();
-    }   
+        this.homeService.getLatestArticle()
+        .subscribe(res => {
+            console.log(res);
+        });
+    }
 }
