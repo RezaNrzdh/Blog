@@ -16,15 +16,11 @@ export class HomeService {
         return this.http.get('http://localhost:3001/api/article/limit/5');
     }
 
-    getOtherLatestArticles = () => {
-        return data.otherLatestArticles;
-    }
-
     getRecentArticles = () => {
         return data.recentArticles;
     }
 
     getPopularArticles = ( ) => {
-        return data.popularArticles;
+        return this.http.get('http://localhost:3001/api/article/popular/5');
     }
 }

@@ -11,12 +11,14 @@ import { PopularArticles } from 'src/app/core/models/popularArticles.model';
 })
 export class RecentComponent implements OnInit {
     recentArticles: Array<RecentArticles> = [];
-    popularArticles: Array<PopularArticles> = [];
+    popular: any = [];
 
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
         this.recentArticles = this.homeService.getRecentArticles();
-        this.popularArticles = this.homeService.getPopularArticles();
+        this.homeService.getPopularArticles().subscribe( res => {
+            this.popular = res;
+        });
     }
 }
