@@ -9,7 +9,7 @@ export class HomeService {
     constructor(private http: HttpClient){}
 
     getEditorPicked = () => {
-        return data.editorPicked;
+        return this.http.get('http://localhost:3001/api/article/picked/3');
     }
 
     getLatestArticle = () => {

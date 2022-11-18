@@ -9,7 +9,7 @@ import { EditorPicked } from 'src/app/core/models/editorPicked.model';
     styleUrls: ['./article-list.component.scss']
 })
 export class ArticleListComponent implements OnInit {
-    articles: Array<EditorPicked> = [];
+    articles: any = [];
 
     constructor(private homeService: HomeService){}
 

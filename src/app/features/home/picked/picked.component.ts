@@ -8,11 +8,16 @@ import { EditorPicked } from 'src/app/core/models/editorPicked.model';
     styleUrls: ['./picked.component.scss']
 })
 export class PickedComponent implements OnInit {
-    editorPicked: Array<EditorPicked> = [];
+    editorPicked: any = [];
     
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
-        this.editorPicked = this.homeService.getEditorPicked();
+        this.homeService.getEditorPicked()
+        .subscribe(
+            res => {
+                this.editorPicked = res;
+            }
+        );
     }
 }

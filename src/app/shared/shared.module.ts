@@ -9,6 +9,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { TextboxComponent } from "./components/textbox/textbox.component";
 import { FilledButtonDirective } from "./directives/filled-button.directive";
+import { CalendarPipe } from "./pipes/calendar.pipe";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
         TextboxComponent,
         CardGridComponent,
         FilledButtonDirective,
-        ButtonComponent
+        ButtonComponent,
+        CalendarPipe
     ],
     imports: [
         CommonModule,
@@ -31,7 +33,8 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
         TextboxComponent,
         CardGridComponent,
         FilledButtonDirective,
-        ButtonComponent
+        ButtonComponent,
+        CalendarPipe
     ]
 })
 export class SharedModule{}

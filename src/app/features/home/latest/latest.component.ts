@@ -11,7 +11,7 @@ import { OtherLastetArticles } from 'src/app/core/models/otherLatestArticles.mod
 })
 export class LatestComponent implements OnInit {
     lastone: any = [];
-    articles: any = [];
+    others: any = [];
 
     otherLatestArticles: Array<OtherLastetArticles> = [];
 
@@ -23,10 +23,8 @@ export class LatestComponent implements OnInit {
             this.lastone = res;
             this.lastone.map((r: any,i: number) => {
                 if(i > 0)
-                   this.articles.push(r);
+                   this.others.push(r);
             });
-            console.log(this.lastone);
-            console.log(this.articles);
         });
     }
 }
