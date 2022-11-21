@@ -10,6 +10,6 @@ export class CalendarPipe implements PipeTransform {
     transform(value: any) {
         const date = new Date(value).toLocaleDateString('fa-IR', this.dateOption);
         const time = new Date(value).toLocaleTimeString([], this.timeOption);
-            return date + ' - ساعت: ' + time;
+            return date + ' - ساعت ' + time;
     }
 }
