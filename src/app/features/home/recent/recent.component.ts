@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/core/services/home.service';
 
 import { RecentArticles } from 'src/app/core/models/recentArticles.model';
-import { PopularArticles } from 'src/app/core/models/popularArticles.model';
 
 @Component({
     selector: 'home-recent',
@@ -16,7 +15,10 @@ export class RecentComponent implements OnInit {
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
-        this.recentArticles = this.homeService.getRecentArticles();
+        this.homeService.getOtherArticles(6,13).subscribe( res => {
+            console.log(res);
+        });
+        
         this.homeService.getPopularArticles().subscribe( res => {
             this.popular = res;
         });

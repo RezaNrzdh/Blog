@@ -9,15 +9,19 @@ export class HomeService {
     constructor(private http: HttpClient){}
 
     getEditorPicked = () => {
-        return this.http.get('http://localhost:3001/api/article/picked/3');
+        return this.http.get('http://localhost:3001/api/article/picked/3',);
     }
 
     getLatestArticle = () => {
-        return this.http.get('http://localhost:3001/api/article/limit/5');
+        return this.http.get('http://localhost:3001/api/article/limit/5',{
+            params: {}
+        });
     }
 
-    getRecentArticles = () => {
-        return data.recentArticles;
+    getOtherArticles = (from: number, to: number) => {
+        return this.http.get('http://localhost:3001/api/article/others/other',{
+            params: { from, to }
+        });
     }
 
     getPopularArticles = ( ) => {
