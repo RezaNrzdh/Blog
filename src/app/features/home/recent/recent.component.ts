@@ -15,7 +15,7 @@ export class RecentComponent implements OnInit {
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
-        this.homeService.getOtherArticles(6,13).subscribe( res => {
+        this.homeService.getLatestArticle(6,13).subscribe( res => {
             console.log(res);
         });
         
