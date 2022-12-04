@@ -1,14 +1,14 @@
 <div class="other-articles">
     <div class="other-articles-main">
         <h2>آخرین مقالات</h2>
-        <div *ngFor="let recent of recentArticles" class="other-articles-main-card">
-            <div class="oamc-img"><img src="{{ recent.img }}" /></div>
+        <div *ngFor="let recent of latest" class="other-articles-main-card">
+            <div class="oamc-img"><img src="/assets/images/{{ recent.img }}" /></div>
             <div class="oamc-info">
                 <h3>{{ recent.title }}</h3>
                 <div class="oamc-author">
-                    <img src="{{ recent.authorImg }}" />
+                    <img src="/assets/images/author.jpg" />
                     <span>{{ recent.author }}</span> |
-                    <span>{{ recent.created }}</span>
+                    <span>{{ recent.created | persianCalendar }}</span>
                 </div>
             </div>
         </div>

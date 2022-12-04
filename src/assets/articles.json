@@ -3,6 +3,7 @@
         "$oid": "637a02113547f9e1945bd475"
     },
     "title": "همه چیز راجع‌ به استانبول کارت",
+    "slug": "istanbul-kart",
     "img": [
         "istanbul-kart-1138x493.jpg"
     ],
@@ -24,6 +25,7 @@
         "$oid": "637a02203547f9e1945bd476"
     },
     "title": "روی قیمت بلیط هواپیما چه عواملی نقش دارند؟",
+    "slug": "ticket-price-factors",
     "img": [
         "ticket-price-factors.jpg"
     ],
@@ -44,6 +46,7 @@
         "$oid": "637a02293547f9e1945bd477"
     },
     "title": "15 تا از غذاهای معروف ترکیه که باید حتما طعم آن‌ها را بچشید",
+    "slug": "turkey-food",
     "img": [
         "turkey-food-1138x493.jpg"
     ],
@@ -65,6 +68,7 @@
         "$oid": "637a02553547f9e1945bd478"
     },
     "title": "معرفی 5 مورد از بهترین و گران ترین هتل های جهان",
+    "slug": "expensive-hotels",
     "img": [
         "expensive-hotels-1138x493.jpg"
     ],
@@ -86,6 +90,7 @@
         "$oid": "637a029a3547f9e1945bd479"
     },
     "title": "عوارض خروج از کشور |‌ راهنمای جامع عوارض و مالیات",
+    "slug": "departure-toll",
     "img": [
         "departure-toll-1138x493.jpg"
     ],
@@ -107,6 +112,7 @@
         "$oid": "637a02a53547f9e1945bd47a"
     },
     "title": "سفر از مرز آستارا باکو | چطور و چه زمانی؟",
+    "slug": "baku-azarbaijan",
     "img": [
         "baku-azarbaijan-1138x493.jpg"
     ],
@@ -128,6 +134,7 @@
         "$oid": "637a02b03547f9e1945bd47b"
     },
     "title": "راهنمای کامل سوار شدن به هواپیما را از اینجا ببینید",
+    "slug": "airport-terminal",
     "img": [
         "airport-terminal.jpg"
     ],
@@ -148,6 +155,7 @@
         "$oid": "637a02bd3547f9e1945bd47c"
     },
     "title": "راهنمای گشت و گذار در میدان تقسیم",
+    "slug": "taksim-square",
     "img": [
         "taksim-square-1138x493.jpg"
     ],
@@ -170,6 +178,7 @@
         "$oid": "637a02c73547f9e1945bd47d"
     },
     "title": "بهترین زمان سفر به کیش چه فصلی از سال است؟",
+    "slug": "kish-island",
     "img": [
         "kish-island-1138x493.jpg"
     ],
@@ -190,6 +199,7 @@
         "$oid": "637a02d13547f9e1945bd47e"
     },
     "title": "جزیره هرمز کجاست؟ دیدنی های جزیره هرمز",
+    "slug": "hormoz-1",
     "img": [
         "hormoz-1.jpg"
     ],
@@ -210,6 +220,7 @@
         "$oid": "637a02fa3547f9e1945bd47f"
     },
     "title": "چطور از دبی به ابوظبی برویم؟",
+    "slug": "dubai-to-abu-dhabi",
     "img": [
         "dubai-to-abu-dhabi-1138x493.jpg"
     ],
@@ -232,6 +243,7 @@
         "$oid": "637a03073547f9e1945bd480"
     },
     "title": "چند پیشنهاد برای گشت و گذار در سفر زمستانی به پاریس",
+    "slug": "winter-in-paris",
     "img": [
         "winter-in-paris.jpg"
     ],
@@ -254,6 +266,7 @@
         "$oid": "637a03313547f9e1945bd481"
     },
     "title": "5 روش برای سفر از استانبول به کاپادوکیا",
+    "slug": "in-cappadocia-1",
     "img": [
         "in-cappadocia-1.jpg"
     ],
@@ -276,6 +289,7 @@
         "$oid": "637a033e3547f9e1945bd482"
     },
     "title": "سفر به تورنتو | راهنمای جامع زندگی و هزینه تورنتو",
+    "slug": "travel-to-toronto",
     "img": [
         "travel-to-toronto.jpg"
     ],
@@ -298,6 +312,7 @@
         "$oid": "637a034b3547f9e1945bd483"
     },
     "title": "راهنمای سفر به برلین : چی بخوریم، چی بخریم و کجا بریم؟",
+    "slug": "berlin-guide-3",
     "img": [
         "berlin-guide-3-1100x493.jpg"
     ],

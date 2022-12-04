@@ -1,5 +1,6 @@
 <div class="latest-articles">
     <div class="latest">
+        <a routerLink="/article/{{ lastone[0].slug }}"></a>
         <img src="/assets/images/{{ lastone[0].img[0] }}" />
         <div class="info">
             <h2>{{ lastone[0].title }}</h2>
@@ -14,12 +15,3 @@
         </div>
     </div>
 </div>
-<!-- <div class="recent-articles">
-    <div class="recent-articles-col" *ngFor="let article of otherLatestArticles">
-        <div class="recent-articles-img"><a routerLink=""><img src="{{ article.img }}" /></a></div>
-        <div class="recent-articles-info">
-            <a routerLink="" class="link"><h3>{{ article.title }}</h3></a>
-            <label>{{ article.created }}</label>
-        </div>
-    </div>
-</div> -->

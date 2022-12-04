@@ -1,10 +1,10 @@
 <div class="main">
-    <span>{{ article.created }}</span>
+    <span>{{ article.created | persianCalendar }}</span>
     <h1>{{ article.title }}</h1>
-    <img src="{{ article.img }}" />
+    <img src="/assets/images/{{ article.img }}" />
     <div class="author">
-        <img src="{{ article.authorImg }}" />
-        <span>{{ article.author }} | {{ article.duration }}</span>
+        <img src="/assets/images/author.jpg" />
+        <span>{{ article.author }} - زمان مطالعه: {{ article.duration }} دقیقه</span>
     </div>
     <div class="desc">
         {{ article.desc }}

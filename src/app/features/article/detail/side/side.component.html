@@ -4,11 +4,11 @@
         <h4>مقالات پربازدید</h4>
         <span></span>
     </div>
-    <div *ngFor="let popular of popularArticles" class="card">
-        <img src="{{ popular.img }}" />
+    <div *ngFor="let popular of popular" class="card">
+        <img src="/assets/images/{{ popular.img }}" />
         <div class="info">
             <h3>{{ popular.title }}</h3>
-            <span>{{ popular.created }}</span>
+            <span>{{ popular.created | persianCalendar }}</span>
         </div>
     </div>
 </div>

@@ -1,16 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { ArticleService } from "src/app/core/services/article.service";
-
-interface Article {
-    img: string;
-    title: string;
-    author: string;
-    authorImg: string;
-    created: string;
-    duration: string;
-    desc: string;
-    tags: Array<string>
-}
 
 @Component({
     selector: 'article-detail-main',
@@ -18,11 +8,13 @@ interface Article {
     styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-    article: Article = { img: '', title: '', author: '', authorImg: '', created: '', duration: '', desc: '', tags: [] };
+    article: any = [];
     
-    constructor(private articleService: ArticleService){}
+    constructor(private articleService: ArticleService, private route: ActivatedRoute){}
 
     ngOnInit(): void {
-        this.article = this.articleService.getArticle();
+        this.article = this.articleService.getArticle(this.route.snapshot.params['slug']).subscribe(res => {
+            this.article = res;
+        });
     }
 }

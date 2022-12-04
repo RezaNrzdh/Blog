@@ -29,17 +29,12 @@
             margin-top: 24px;
             .oamc-img{
                 display: block;
-                min-width: 192px;
+                width: 256px;
                 height: 192px;
-                overflow: hidden;
                 img {
-                    min-width: inherit;
+                    width: inherit;
                     height: inherit;
                     object-fit: cover;
-                    transition: all ease-in-out 0.3s;
-                    &:hover{
-                        transform: scale(1.07);
-                    }
                 }                    
             }
             .oamc-info{
