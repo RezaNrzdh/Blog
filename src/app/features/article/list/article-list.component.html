@@ -4,5 +4,5 @@
         <div blog-card-grid *ngFor="let card of allarticles" [data]="card" [isShadow]="true"></div>
     </div>
     <br>
-    <button (click)="getMoreArticles()" style="width: fit-content; margin: auto auto 32px auto;">More</button>
+    <button *ngIf="lt > 1000" (click)="getMoreArticles()" style="width: fit-content; margin: auto auto 32px auto;">More</button>
 </section>
