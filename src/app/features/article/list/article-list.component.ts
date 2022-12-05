@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HomeService } from 'src/app/core/services/home.service';
-
-import { EditorPicked } from 'src/app/core/models/editorPicked.model';
+import { ArticleService } from 'src/app/core/services/article.service';
 
 @Component({
     selector: 'blog-article-list',
@@ -9,11 +7,22 @@ import { EditorPicked } from 'src/app/core/models/editorPicked.model';
     styleUrls: ['./article-list.component.scss']
 })
 export class ArticleListComponent implements OnInit {
-    articles: any = [];
+    allarticles: any = [];
+    lt: number = 0;
 
-    constructor(private homeService: HomeService){}
+    constructor(private articleService: ArticleService){}
 
     ngOnInit(): void {
-        this.articles = this.homeService.getEditorPicked();
+        this.allarticles = this.articleService.getAllArticles(0).subscribe(res => {
+            this.allarticles = res;
+            this.lt = this.allarticles[this.allarticles.length - 1]._id;
+        })
+    }
+
+    getMoreArticles() {
+        this.articleService.getAllArticles(this.lt).subscribe(res => {
+            this.allarticles = this.allarticles.concat(res);
+            this.lt = this.allarticles[this.allarticles.length - 1]._id;
+        })   
     }
 }

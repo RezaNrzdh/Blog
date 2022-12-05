@@ -28,13 +28,18 @@
             background-color: white;
             margin-top: 24px;
             .oamc-img{
-                display: block;
-                width: 256px;
+                display: flex;
+                min-width: 256px;
                 height: 192px;
+                overflow: hidden;
                 img {
-                    width: inherit;
+                    width: 101%;
                     height: inherit;
                     object-fit: cover;
+                    transition: all ease-in-out 0.3s;
+                    &:hover{
+                        transform: scale(1.05);
+                    }                     
                 }                    
             }
             .oamc-info{
@@ -43,9 +48,11 @@
                 width: 100%;
                 padding: 32px;
                 box-sizing: border-box;
-                h3{
-                    font-size: $headline4;
+                a{
                     color: $text-main;
+                    h3{
+                        font-size: $headline4;
+                    }
                 }
                 .oamc-author{
                     display: flex;
@@ -109,10 +116,12 @@
                 flex-direction: column;
                 box-sizing: border-box;
                 padding-right: 16px;
-                h3{
-                    font-size: $body2;
+                a {
                     color: $text-main;
-                    margin-bottom: 8px;
+                    h3{
+                        font-size: $body2;
+                        margin-bottom: 8px;
+                    }
                 }
                 span{
                     font-size: $caption;
