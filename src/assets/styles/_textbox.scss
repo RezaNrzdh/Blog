@@ -6,4 +6,16 @@
     border-radius: 12px;
     outline: none;
     text-indent: 16px;
+    font-family: VazirMatnFont;
+}
+
+@mixin OutlinedTextarea {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid $stroke-main;
+    border-radius: 12px;
+    outline: none;
+    padding: 16px;
+    resize: none;
+    font-family: VazirMatnFont;
 }

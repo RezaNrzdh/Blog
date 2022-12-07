@@ -1,1 +1,26 @@
-<p>contact works!</p>
+<section>
+    <div class="container">
+        <h1>تماس با ما</h1>
+        <p>فرم زیر را پر کنید، تیم ما در اسرع وقت با شما در ارتباط خواهند بود.</p>
+    </div>
+</section>
+<div class="content">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="textboxContainer margin-bot-m">
+            <label>نام شما</label>
+            <input type="text" name="name" ngModel required #name="ngModel">
+            <span *ngIf="name.invalid && name.touched" class="alertmessage">لطفا نام خود را وارد کنید.</span>
+        </div>
+        <div class="textboxContainer">
+            <label>آدرس ایمیل</label>
+            <input type="email" name="email" ngModel required email #email="ngModel"/>
+            <span *ngIf="email.invalid && email.touched" class="alertmessage">لطفا ایمیل خود را وارد کنید.</span>
+        </div>
+        <div class="textboxContainer bot">
+            <label>نظر شما</label>
+            <textarea rows="5" maxlength="300" name="message" ngModel required #msg="ngModel"></textarea>
+            <span *ngIf="msg.invalid && msg.touched" class="alertmessage">لطفا نظر خود را بنویسید.</span>
+        </div>
+        <button type="submit" [disabled]="form.invalid || form.untouched " class="margin-top-l margin-bot-xl">ارسال نظر</button>
+    </form>
+</div>

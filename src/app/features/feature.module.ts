@@ -8,6 +8,7 @@ import { CommonModule } from "@angular/common";
 import { FeatureRoutingModule } from "./feature-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { AuthModule } from "./auth/auth.module";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { AuthModule } from "./auth/auth.module";
     imports: [
         CommonModule,
         SharedModule,
+        FormsModule,
         HomeModule,
         ArticleModule,
         AuthModule,

@@ -7,7 +7,7 @@
     <div *ngFor="let popular of popular" class="card">
         <img src="/assets/images/{{ popular.img }}" />
         <div class="info">
-            <h3>{{ popular.title }}</h3>
+            <a routerLink="/article/{{ popular.slug }}"><h3>{{ popular.title }}</h3></a>
             <span>{{ popular.created | persianCalendar }}</span>
         </div>
     </div>

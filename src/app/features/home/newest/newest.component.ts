@@ -10,12 +10,19 @@ import { HomeService } from 'src/app/core/services/home.service';
 export class NewestComponent implements OnInit {
     lastone: any = [];
     others: any = [];
+    loading: boolean = false;
 
     constructor(private homeService: HomeService){}
     
     ngOnInit(): void {
+
+        this.loading = true;
+
         this.homeService.getNewestArticle()
         .subscribe(res => {
+            
+            if(res) this.loading=false;
+
             this.lastone = res;
             this.lastone.map((r: any,i: number) => {
                 if(i > 0)

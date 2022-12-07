@@ -1,0 +1,14 @@
+@import '/src/assets/styles/variables';
+@import '/src/assets/styles/color';
+
+section{
+    display: flex;
+    flex-direction: column;  
+    width: 1024px;
+    margin: 32px auto 0 auto;
+    h1{
+        font-size: $headline3;
+        color: $text-main;
+        margin-bottom: 24px;
+    }
+}
