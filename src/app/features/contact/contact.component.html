@@ -5,6 +5,7 @@
     </div>
 </section>
 <div class="content">
+    <div *ngIf="showAlert" blog-alert [state]="'alertDanger'" class="margin-bot-m">پیغام شما با موفقیت ارسال شد.</div>
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <div class="textboxContainer margin-bot-m">
             <label>نام شما</label>

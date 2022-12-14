@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HomeService } from 'src/app/core/services/home.service';
+import {ArticleModel} from "../../../core/models/article.model";
 
 @Component({
     selector: 'home-latest',
@@ -18,9 +19,7 @@ export class NewestComponent implements OnInit {
 
         this.loading = true;
 
-        this.homeService.getNewestArticle()
-        .subscribe(res => {
-            
+        this.homeService.getNewestArticle().subscribe((res: ArticleModel) => {
             if(res) this.loading=false;
 
             this.lastone = res;

@@ -1,0 +1,32 @@
+@import '/src/assets/styles/color';
+@import '/src/assets/styles/variables';
+
+:host{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: $body2;
+    span{
+        display: flex;
+        width: 16px;
+        height: 16px;
+        background-color: red;
+        margin-left: 12px;
+    }
+}
+:host.alert-success{
+    border: 1px solid $success-main;
+    background-color: $success-light;
+}
+:host.alert-danger{
+    border: 1px solid $danger-main;
+    background-color: $danger-light;
+}
+:host.alert-warning{
+
+}
+:host.alert-info{
+
+}

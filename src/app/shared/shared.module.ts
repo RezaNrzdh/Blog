@@ -10,6 +10,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { TextboxComponent } from "./components/textbox/textbox.component";
 import { FilledButtonDirective } from "./directives/filled-button.directive";
 import { CalendarPipe } from "./pipes/calendar.pipe";
+import {AlertComponent} from "./components/alert/alert.component";
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { CalendarPipe } from "./pipes/calendar.pipe";
         CardGridComponent,
         FilledButtonDirective,
         ButtonComponent,
-        CalendarPipe
+        CalendarPipe,
+        AlertComponent
     ],
     imports: [
         CommonModule,
@@ -34,7 +36,8 @@ import { CalendarPipe } from "./pipes/calendar.pipe";
         CardGridComponent,
         FilledButtonDirective,
         ButtonComponent,
-        CalendarPipe
+        CalendarPipe,
+        AlertComponent
     ]
 })
 export class SharedModule{}

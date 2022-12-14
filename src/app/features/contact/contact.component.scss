@@ -33,6 +33,9 @@ section{
 div.content{
     width: 1024px;
     margin: 32px auto 0 auto;
+    div[blog-alert]{
+        width: 70%;
+    }
     form{
         display: grid;
         grid-template-areas: 
