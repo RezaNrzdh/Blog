@@ -11,4 +11,19 @@ export class ArticleModel {
     public visit?: number;
     public created?: number;
     public __v?: number;
+
+    // constructor(
+    //     _id: number,
+    //     title: string,
+    //     slug: string,
+    //     img: [],
+    //     desc: string,
+    //     duration: number,
+    //     author: string,
+    //     tags: [],
+    //     editorpicked: boolean,
+    //     bisit: number,
+    //     created: number,
+    //     __v: number) {
+    // }
 }

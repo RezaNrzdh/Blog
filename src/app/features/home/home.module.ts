@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { NewestComponent } from './newest/newest.component';
 import { PickedComponent } from './picked/picked.component';
 import { RecentComponent } from './recent/recent.component';
+import {HomeRoutingModule} from "./home-routing.module";
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { RecentComponent } from './recent/recent.component';
     imports: [
         CommonModule,
         RoutingModule,
-        SharedModule
+        SharedModule,
+        HomeRoutingModule
     ]
 })
 export class HomeModule {}

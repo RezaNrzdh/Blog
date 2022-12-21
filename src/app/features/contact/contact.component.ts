@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
     onSubmit(form: NgForm) {
         this.contentService.createNewMessage(form.value).subscribe((res:{doc?: ContactModel, status?: number}) => {
             this.response = res;
-            console.log(res.status);
             this.showAlert = true;
         });
         form.onReset();
