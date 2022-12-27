@@ -1,19 +1,19 @@
 import {NgModule} from "@angular/core";
-import {ContactComponent} from "./contact.component";
 import {CommonModule} from "@angular/common";
 import {SharedModule} from "../../shared/shared.module";
 import {FormsModule} from "@angular/forms";
-import {ContactRoutingModule} from "./contact-routing.module";
+import {LoginComponent} from "./login.component";
+import {LoginRoutingModule} from "./login-routing.module";
 
 @NgModule({
     declarations: [
-        ContactComponent
+        LoginComponent
     ],
     imports: [
         CommonModule,
-        FormsModule,
         SharedModule,
-        ContactRoutingModule
+        FormsModule,
+        LoginRoutingModule
     ]
 })
-export class ContactModule {}
+export class LoginModule { }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import { HomeService } from 'src/app/core/services/home.service';
-import {ArticleModel} from "../../../core/models/article.model";
+import {ArticleModel} from "../../../../core/models/article.model";
 
 @Component({
     selector: 'home-latest',
@@ -14,7 +14,7 @@ export class NewestComponent implements OnInit {
     loading: boolean = false;
 
     constructor(private homeService: HomeService){}
-    
+
     ngOnInit(): void {
 
         this.loading = true;

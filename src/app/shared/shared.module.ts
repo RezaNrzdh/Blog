@@ -1,6 +1,5 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { RoutingModule } from "../routing.module";
 import { ButtonComponent } from "./components/button/button.component";
 
 import { CardGridComponent } from "./components/card-grid/card-grid.component";
@@ -11,6 +10,7 @@ import { TextboxComponent } from "./components/textbox/textbox.component";
 import { FilledButtonDirective } from "./directives/filled-button.directive";
 import { CalendarPipe } from "./pipes/calendar.pipe";
 import {AlertComponent} from "./components/alert/alert.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -26,7 +26,7 @@ import {AlertComponent} from "./components/alert/alert.component";
     ],
     imports: [
         CommonModule,
-        RoutingModule
+        RouterModule
     ],
     exports: [
         HeaderComponent,
