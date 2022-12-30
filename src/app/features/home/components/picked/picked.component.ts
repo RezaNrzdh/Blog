@@ -1,4 +1,4 @@
-import {Component, NgIterable, OnInit} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import { HomeService } from "src/app/core/services/home.service";
 import { ArticleModel } from 'src/app/core/models/article.model';
 
