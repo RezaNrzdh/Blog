@@ -19,14 +19,21 @@ export class NewestComponent implements OnInit {
 
         this.loading = true;
 
-        this.homeService.getNewestArticle().subscribe((res: ArticleModel) => {
-            if(res) this.loading=false;
+        this.homeService.getNewestArticle().subscribe({
+            next: ((value: ArticleModel) => {
+                if(value) this.loading=false;
 
-            this.lastone = res;
-            this.lastone.map((r: any,i: number) => {
-                if(i > 0)
-                   this.others.push(r);
-            });
+                this.lastone = this.lastone.concat(value);
+                console.log(this.lastone);
+                this.lastone.map((r: any, i: number) => {
+                   if(i > 0)
+                       this.others.push(r);
+                });
+            }),
+            error: ((err: any) => {
+                console.log(err);
+            }),
+            complete: (() => {})
         });
     }
 }
