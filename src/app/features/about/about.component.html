@@ -1,4 +1,7 @@
 <section class="about">
+    <div class="heroImage">
+        <img src="/assets/images/about.png" alt="about_image"/>
+    </div>
     <div class="container">
         <div class="info">
             <span>درباره ما</span>
@@ -6,7 +9,7 @@
             <p>{{ data.goals }}</p>
         </div>
         <div class="illustration">
-            <span></span>
+            <img src="/assets/images/darts.png" alt="dart"/>
         </div>
     </div>
 </section>
@@ -25,5 +28,12 @@
     <div class="container">
         <span>درباره ما</span>
         <h2>تیم حرفه ای هفده</h2>
+        <div class="teamList">
+            <div *ngFor="let member of data.team">
+                <img src="{{ member.img }}" alt="team-picture" />
+                <label>{{ member.name }}</label>
+                <p>{{ member.desc }}</p>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,10 +1,34 @@
 @import '/src/assets/styles/variables';
 @import '/src/assets/styles/color';
 
+:host{
+    background-color: white;
+    &:after{
+        display: block;
+        position: absolute;
+        top:80px;
+        left: 0;
+        content: "";
+        width: 50%;
+        height: 380px;
+        background-color: $primary-light;
+    }
+}
 section.about{
     display: flex;
     flex-direction: column;
     width: 100%;
+    .heroImage{
+        width: 1024px;
+        margin: 48px auto 0 auto;
+        z-index: 1;
+        img{
+            width: 1024px;
+            height: 285px;
+            background-color: $gray-light;
+            border-radius: 16px;
+        }
+    }
     .container {
         display: grid;
         grid-template-columns: 672px 1fr;
@@ -32,7 +56,7 @@ section.about{
             align-items: center;
             span {
                 display: flex;
-                width: 100px;
+                width: 150px;
                 height: 100px;
                 background-color: gainsboro;
             }
@@ -75,21 +99,44 @@ section.team{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 192px;
     background-color: $gray-main;
     .container{
         display: flex;
         flex-direction: column;
         width: 1024px;
-        margin: 48px auto 0 auto;
-    }
-    span {
-        color: $text-variant;
-        margin-top: 8px;
-        font-size: $body2;
-    }
-    h2{
-        font-size: $headline3;
-        color: $text-main;
+        margin: 48px auto 48px auto;
+        span {
+            color: $text-variant;
+            margin-top: 8px;
+            font-size: $body2;
+        }
+        h2{
+            font-size: $headline3;
+            color: $text-main;
+            margin-bottom: 16px;
+        }
+        .teamList {
+            display: grid;
+            grid-template-columns:  1fr 1fr 1fr 1fr;
+            grid-column-gap: 32px;
+            div {
+                width: 100%;
+                img{
+                    width: 100%;
+                    border-radius: 16px;
+                }
+                label{
+                    display: block;
+                    margin-top: 8px;
+                    font-weight: bold;
+                    color: $text-main;
+                }
+                p{
+                    margin: 8px 0 0 0;
+                    font-size: $body2;
+                    color: $text-variant;
+                }
+            }
+        }
     }
 }
