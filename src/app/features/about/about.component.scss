@@ -1,7 +1,68 @@
 @import '/src/assets/styles/variables';
 @import '/src/assets/styles/color';
 
-section{
+section.about{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .container {
+        display: grid;
+        grid-template-columns: 672px 1fr;
+        grid-column-gap: 32px;
+        width: 1024px;
+        margin: 48px auto 24px auto;
+        div.info{
+            span {
+                color: $text-variant;
+                margin-top: 8px;
+                font-size: $body2;
+            }
+            h2{
+                font-size: $headline3;
+                color: $text-main;
+            }
+            p{
+                color: $text-main;
+                margin: 16px 0;
+            }
+        }
+        div.illustration {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            span {
+                display: flex;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        }
+    }
+}
+section.properties {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+    width: 1024px;
+    margin: 0 auto 48px auto;
+    .property {
+        display: flex;
+        height: 128px;
+        .property_illustration {
+            display: flex;
+            span {
+                width: 64px;
+                height: 64px;
+                background-color: red;
+            }
+        }
+        .property_info {
+            width: 100%;
+            background-color: blue;
+        }
+    }
+}
+section.team{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -13,14 +74,13 @@ section{
         width: 1024px;
         margin: 48px auto 0 auto;
     }
-    h1{
-        font-size: $headline3;
-        color: $text-main;
-    }
-    p{
-        width: 30%;
+    span {
         color: $text-variant;
         margin-top: 8px;
         font-size: $body2;
+    }
+    h2{
+        font-size: $headline3;
+        color: $text-main;
     }
 }

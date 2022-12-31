@@ -15,7 +15,7 @@ export class ArticleListComponent implements OnInit {
 
     ngOnInit(): void {
         this.articleService.getAllArticles(0).subscribe((res:ArticleModel) => {
-            console.log(res);
+            //console.log(res);
             this.allarticles = res;
             this.lt = this.allarticles[this.allarticles.length - 1]._id;
         })
