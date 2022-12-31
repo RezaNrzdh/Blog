@@ -3,9 +3,7 @@
         <div class="info">
             <span>درباره ما</span>
             <h2>اهداف ما</h2>
-            <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-            </p>
+            <p>{{ data.goals }}</p>
         </div>
         <div class="illustration">
             <span></span>
@@ -13,31 +11,13 @@
     </div>
 </section>
 <section class="properties">
-    <div class="property">
+    <div *ngFor="let item of data.properties" class="property">
         <div class="property_illustration">
             <span></span>
         </div>
         <div class="property_info">
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-    <div class="property">
-        <div class="property_illustration">
-            <span></span>
-        </div>
-        <div class="property_info">
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-    <div class="property">
-        <div class="property_illustration">
-            <span></span>
-        </div>
-        <div class="property_info">
-            <h3></h3>
-            <p></p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.desc }}</p>
         </div>
     </div>
 </section>
