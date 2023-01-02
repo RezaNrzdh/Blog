@@ -1,0 +1,66 @@
+@import 'src/assets/styles/variables';
+@import '/src/assets/styles/buttons';
+@import "src/assets/styles/color";
+
+:host{
+    width: 100%;
+    background-color: $primary-light;
+}
+.newsletter {
+    height: 300px;
+    .container {
+        display: grid;
+        grid-template-columns: 672px 1fr;
+        width: 1024px;
+        height: inherit;
+        margin: auto;
+        .info{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .title {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 24px;
+                }
+                label{
+                    font-size: $body2;
+                    color: $text-variant;
+                    margin-right: 8px;
+                }
+            }
+            h4 {
+                font-size: $headline2;
+                color: $text-main;
+                margin-bottom: 8px;
+            }
+            .action {
+                display: flex;
+                input {
+                    width: 60%;
+                    height: 56px;
+                    background-color: white;
+                    border-radius: 16px;
+                    border: none;
+                    outline: none;
+                    padding: 0 24px;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    color: $text-main;
+                    font-family: VazirMatnFont;
+                }
+                button {
+                    @include FilledButton;
+                    height: 56px;
+                    padding: 0 24px;
+                    margin-right: 16px;
+                }
+            }
+        }
+        > img {
+            height: 220px;
+            margin: auto;
+        }
+    }
+}
