@@ -26,7 +26,7 @@ export class NewestComponent implements OnInit {
                 if(value) this.loading = false;
 
                 this.others =  this.others.concat(value);
-                this.lastone = this.others.shift();;
+                this.lastone = this.others.shift();
 
             }),
             error: ((err: any) => {
