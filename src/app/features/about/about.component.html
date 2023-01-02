@@ -33,6 +33,11 @@
                 <img src="{{ member.img }}" alt="team-picture" />
                 <label>{{ member.name }}</label>
                 <p>{{ member.desc }}</p>
+                <div class="social">
+                    <a *ngFor="let social of member.social" href="{{ social.url }}" target="_blank">
+                        <img src="/assets/icons/{{ social.name }}.svg" alt="{{ social.name }}" />
+                    </a>
+                </div>
             </div>
         </div>
     </div>
