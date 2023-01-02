@@ -15,7 +15,14 @@ export class AboutComponent implements OnInit {
     constructor(private aboutService: AboutService) { }
 
     ngOnInit(): void {
-        this.data = this.aboutService.getAllData();
+        this.aboutService.getTeamMember().subscribe({
+            next: ((value:AboutModel) => {
+                this.data.goals = value.goals;
+                this.data.properties = value.properties;
+                this.data.team = value.team;
+            }),
+            error: ((err: any) => { console.log(err) }),
+        })
     }
 
 }

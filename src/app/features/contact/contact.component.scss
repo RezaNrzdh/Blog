@@ -34,47 +34,55 @@ section{
 .bot { grid-area: bot; }
 
 div.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
     width: 1024px;
     margin: 32px auto 0 auto;
-    div[blog-alert]{
-        width: 70%;
-    }
-    form{
-        display: grid;
-        grid-template-areas: 
+    .formContainer {
+        form{
+            display: grid;
+            grid-template-areas:
             'top top'
             'bot bot';
-        grid-column-gap: 16px;
-        width: 70%;
-        .textboxContainer{
-            display: flex;
-            flex-direction: column;
-            label{
-                color: $text-variant;
-                margin-bottom: 8px;
-                font-size: 14px;
+            grid-column-gap: 16px;
+            .textboxContainer{
+                display: flex;
+                flex-direction: column;
+                label{
+                    color: $text-variant;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+                input{
+                    @include OutlinedTextbox;
+                }
+                textarea{
+                    @include OutlinedTextarea;
+                }
+                input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+                    border-color: $danger-main;
+                }
             }
-            input{
-                @include OutlinedTextbox;
+            .alertmessage {
+                font-size: 12px;
+                margin-top: 2px;
+                margin-right: 16px;
+                color: $danger-main;
             }
-            textarea{
-                @include OutlinedTextarea;
+            button{
+                @include FilledButton;
             }
-            input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
-                border-color: $danger-main;
+            button[disabled]{
+                @include DisableFilledButton;
             }
         }
-        .alertmessage {
-            font-size: 12px;
-            margin-top: 2px;
-            margin-right: 16px;
-            color: $danger-main;
-        }
-        button{
-            @include FilledButton;
-        }
-        button[disabled]{
-            @include DisableFilledButton;
+    }
+    .map {
+        > img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 16px;
         }
     }
 }

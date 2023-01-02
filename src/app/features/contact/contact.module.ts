@@ -4,6 +4,7 @@ import {CommonModule} from "@angular/common";
 import {SharedModule} from "../../shared/shared.module";
 import {FormsModule} from "@angular/forms";
 import {ContactRoutingModule} from "./contact-routing.module";
+import {HomeModule} from "../home/home.module";
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import {ContactRoutingModule} from "./contact-routing.module";
         CommonModule,
         FormsModule,
         SharedModule,
-        ContactRoutingModule
+        ContactRoutingModule,
+        HomeModule
     ]
 })
 export class ContactModule {}

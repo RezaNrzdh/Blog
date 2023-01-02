@@ -1,9 +1,9 @@
 <div class="latest-articles">
     <div class="latest">
-        <a routerLink="/article/{{ lastone[0].slug }}"></a>
-        <img src="/assets/images/{{ lastone[0].img[0] }}" />
+        <a routerLink="/article/{{ lastone.slug }}"></a>
+        <img src="/assets/images/{{ lastone.img }}" />
         <div class="info">
-            <h2>{{ lastone[0].title }}</h2>
+            <h2>{{ lastone.title }}</h2>
         </div>
     </div>
     <div class="other">

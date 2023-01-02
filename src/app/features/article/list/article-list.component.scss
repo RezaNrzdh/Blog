@@ -1,5 +1,6 @@
-@import '/src/assets/styles/variables';
-@import '/src/assets/styles/color';
+@import "/src/assets/styles/variables";
+@import "/src/assets/styles/buttons";
+@import "/src/assets/styles/color";
 
 section{
     display: flex;
@@ -16,5 +17,10 @@ section{
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
         grid-column-gap: 32px;
         grid-row-gap: 32px;
+    }
+    button {
+        @include FilledButton;
+        width: fit-content;
+        margin: auto auto 32px auto;
     }
 }

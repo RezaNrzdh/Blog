@@ -9,26 +9,25 @@ import {ArticleModel} from "../../../../core/models/article.model";
 
 })
 export class NewestComponent implements OnInit {
-    lastone: any = [];
+    lastone: ArticleModel = new ArticleModel;
     others: any = [];
     loading: boolean = false;
 
-    constructor(private homeService: HomeService){}
+    constructor(private homeService: HomeService){
+    }
 
     ngOnInit(): void {
 
+        let arr: ArticleModel[];
         this.loading = true;
 
         this.homeService.getNewestArticle().subscribe({
-            next: ((value: ArticleModel) => {
-                if(value) this.loading=false;
+            next: ((value: ArticleModel[]) => {
+                if(value) this.loading = false;
 
-                this.lastone = this.lastone.concat(value);
-                console.log(this.lastone);
-                this.lastone.map((r: any, i: number) => {
-                   if(i > 0)
-                       this.others.push(r);
-                });
+                this.others =  this.others.concat(value);
+                this.lastone = this.others.shift();;
+
             }),
             error: ((err: any) => {
                 console.log(err);

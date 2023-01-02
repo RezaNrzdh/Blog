@@ -21,6 +21,9 @@ import { NewsletterComponent } from "./components/newsletter/newsletter.componen
         CommonModule,
         SharedModule,
         HomeRoutingModule
+    ],
+    exports: [
+        NewsletterComponent
     ]
 })
 export class HomeModule {}
