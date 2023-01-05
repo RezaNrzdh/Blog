@@ -6,7 +6,6 @@ import {ArticleModel} from "../../../../core/models/article.model";
     selector: 'home-latest',
     templateUrl: './newest.component.html',
     styleUrls: ['./newest.component.scss']
-
 })
 export class NewestComponent implements OnInit {
     lastone: ArticleModel = new ArticleModel;
