@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'blog-textbox',
-  templateUrl: './textbox.component.html',
-  styleUrls: ['./textbox.component.scss']
+    selector: 'blog-textbox',
+    templateUrl: './textbox.component.html',
+    styleUrls: ['./textbox.component.scss']
 })
-export class TextboxComponent implements OnInit {
+export class TextboxComponent {
 
-  constructor() { }
+    @Input() title?: string;
+    @Input() name?: string;
 
-  ngOnInit(): void {
-  }
+    getvalue: string = "";
 
+    get value(): string {
+
+    }
+
+    onChangedHandler (value: any): any {
+
+    }
 }

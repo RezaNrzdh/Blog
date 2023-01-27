@@ -1,0 +1,21 @@
+@import "src/assets/styles/color";
+@import "src/assets/styles/textbox";
+
+.host{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: $text-variant;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+input{
+    @include OutlinedTextbox;
+}
+textarea{
+    @include OutlinedTextarea;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border-color: $danger-main;
+}

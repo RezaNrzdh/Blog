@@ -1,3 +1,7 @@
-<a routerLink="/article/{{ data.slug }}" class="editor-picked-cards-img"><img src="/assets/images/{{ data.img[0] }}"/></a>
-<a routerLink="/article/{{ data.slug }}" class="link editor-picked-cards-link"><h3>{{ data.title }}</h3></a>
+<a routerLink="/article/{{ data.slug }}" class="editor-picked-cards-img">
+    <img src="/assets/images/{{ data.img[0] }}"/>
+</a>
+<a routerLink="/article/{{ data.slug }}" class="link editor-picked-cards-link">
+    <h3>{{ data.title }}</h3>
+</a>
 <span>{{ data.created | persianCalendar }}</span>
