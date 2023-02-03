@@ -7,6 +7,7 @@ import { NgForm } from "@angular/forms";
     styleUrls: ["./comment.component.scss"]
 })
 export class CommentComponent implements OnInit {
+
     ngOnInit() {
     }
 

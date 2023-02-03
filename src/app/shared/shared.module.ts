@@ -11,6 +11,7 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
 import { CalendarPipe } from "./pipes/calendar.pipe";
 import {AlertComponent} from "./components/alert/alert.component";
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import {RouterModule} from "@angular/router";
     ],
     imports: [
         CommonModule,
+        FormsModule,
         RouterModule
     ],
     exports: [
