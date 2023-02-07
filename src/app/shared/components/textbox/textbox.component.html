@@ -1,1 +1,7 @@
-<p>textbox works!</p>
+<label>{{ title }}</label>
+<input type="{{type}}"
+       (blur)="onTouched()"
+       (input)="onChange($event.target.value)"
+       [value]="value"
+       [style.width]="width"
+       name="{{name}}" />
