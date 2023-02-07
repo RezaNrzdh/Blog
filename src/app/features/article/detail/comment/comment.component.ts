@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import { NgForm } from "@angular/forms";
+import {FormGroup, FormControl, Validators} from "@angular/forms";
 
 @Component({
     selector: "article-comment",
@@ -8,10 +8,18 @@ import { NgForm } from "@angular/forms";
 })
 export class CommentComponent implements OnInit {
 
+    commentForm: FormGroup | any;
+
     ngOnInit() {
+        this.commentForm = new FormGroup({
+            "name": new FormControl(null, Validators.required),
+            "email": new FormControl(null, [Validators.email, Validators.required]),
+            "phone": new FormControl(null, Validators.required),
+            "comment": new FormControl(null, Validators.required)
+        })
     }
 
-    onSubmit(form: NgForm) {
-        console.log(form.value);
+    onSubmit() {
+        console.log(this.commentForm.value);
     }
 }

@@ -26,23 +26,19 @@
     </div>
 </div>
 <div class="yourComment">
-    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
         <div>
-            <label>نام شما</label>
-            <input type="text" name="name" ngModel/>
-            <span></span>
+            <blog-textbox type="text" title="نام شما" name="name" width="50%" formControlName="name"></blog-textbox>
+            <span *ngIf="commentForm.get('name').invalid && commentForm.get('name').touched">لطفا نام خود را وارد کنید</span>
         </div>
         <div>
-            <label>آدرس ایمیل</label>
-            <input type="email" name="email" ngModel/>
-            <span></span>
+            <blog-textbox type="email" title="آدرس ایمیل" name="email" width="50%" formControlName="email"></blog-textbox>
+            <span *ngIf="commentForm.get('email').invalid && commentForm.get('email').touched">لطفا ایمیل خود را وارد کنید</span>
         </div>
         <div>
-            <label>نظر شما</label>
-            <input type="text" name="comment" ngModel/>
-            <span></span>
+            <blog-textbox type="text" title="نظر شما" name="comment" width="50%" formControlName="comment"></blog-textbox>
+            <span *ngIf="commentForm.get('comment').invalid && commentForm.get('comment').touched">لطفا نظر خود را وارد کنید</span>
         </div>
-        <blog-textbox [title]="'شماره تماس'" [name]="'phone'" ngModel></blog-textbox>
         <button type="submit">SUBMIT</button>
     </form>
 </div>
