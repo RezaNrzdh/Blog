@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { SharedModule } from "../../shared/shared.module";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import {ArticleRoutingModule} from "./article-routing.module";
 import {ArticleListComponent} from "./list/article-list.component";
@@ -22,6 +22,7 @@ import {CommentComponent} from "./detail/comment/comment.component";
         CommonModule,
         SharedModule,
         FormsModule,
+        ReactiveFormsModule,
         ArticleRoutingModule
     ]
 })
