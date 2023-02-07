@@ -1,5 +1,5 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
+import {Component, Input} from '@angular/core';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
     selector: 'blog-textbox',
@@ -8,32 +8,34 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => TextboxComponent),
+            useExisting: TextboxComponent,
             multi: true
         }
     ]
 })
 export class TextboxComponent implements ControlValueAccessor {
 
-    @Input() title?: string;
-    @Input() name?: string;
-    _value?: any;
+    @Input() title!: string;
+    @Input() type!: string;
+    @Input() name!: string;
+    @Input() width?: string;
 
-    get value(): any {
-        return this._value;
-    };
+    value!: string;
+    onChange!: (value: any) => void;
+    onTouched!: () => void;
 
-    set value(_v: any) {
-        this._value = _v;
+    constructor() {
     }
 
-    writeValue(value: string) {
-        this._value = value;
+    writeValue(obj: any) {
+        this.value = obj;
     }
 
     registerOnChange(fn: any) {
+        this.onChange = fn;
     }
 
     registerOnTouched(fn: any) {
+        this.onTouched = fn;
     }
 }
