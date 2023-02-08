@@ -1,3 +1,8 @@
-<label></label>
-<textarea></textarea>
+<label>{{ title }}</label>
+<textarea (input)="onChange($event.target.value)"
+          (blur)="onTouched()"
+          [style.width]="width"
+          [rows]="rows"
+          [maxLength]="maxLength"
+          [placeholder]="placeholder"></textarea>
 <span></span>
