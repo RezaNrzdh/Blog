@@ -1,7 +1,7 @@
 import { Directive, HostBinding, Input, OnInit } from "@angular/core";
 
 @Directive({
-    selector: 'button[filled-button]'
+    selector: 'button[test-button]'
 })
 export class FilledButtonDirective implements OnInit {
     @Input() color?: string;
