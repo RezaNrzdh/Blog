@@ -28,17 +28,17 @@
 <div class="yourComment">
     <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
         <div>
-            <blog-textbox type="text" title="نام شما" name="name" width="50%" formControlName="name"></blog-textbox>
+            <blog-textbox type="text" title="نام شما" name="name" formControlName="name"></blog-textbox>
             <span *ngIf="commentForm.get('name').invalid && commentForm.get('name').touched">لطفا نام خود را وارد کنید</span>
         </div>
         <div>
-            <blog-textbox type="email" title="آدرس ایمیل" name="email" width="50%" formControlName="email"></blog-textbox>
+            <blog-textbox type="email" title="آدرس ایمیل" name="email" formControlName="email"></blog-textbox>
             <span *ngIf="commentForm.get('email').invalid && commentForm.get('email').touched">لطفا ایمیل خود را وارد کنید</span>
         </div>
-        <div>
-            <blog-textbox type="text" title="نظر شما" name="comment" width="50%" formControlName="comment"></blog-textbox>
+        <div class="bot">
+            <blog-textbox type="text" title="نظر شما" name="comment" formControlName="comment"></blog-textbox>
             <span *ngIf="commentForm.get('comment').invalid && commentForm.get('comment').touched">لطفا نظر خود را وارد کنید</span>
         </div>
-        <button type="submit">SUBMIT</button>
+        <button filled-button type="submit">ارسال نظر</button>
     </form>
 </div>
