@@ -13,9 +13,6 @@ label{
 input{
     @include OutlinedTextbox;
 }
-textarea{
-    @include OutlinedTextarea;
-}
 input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
     border-color: $danger-main;
 }
