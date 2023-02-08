@@ -12,6 +12,7 @@ import { CalendarPipe } from "./pipes/calendar.pipe";
 import {AlertComponent} from "./components/alert/alert.component";
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {TextareaComponent} from "./components/textarea/textarea.component";
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import {FormsModule} from "@angular/forms";
         FooterComponent,
         ChipsComponent,
         TextboxComponent,
+        TextareaComponent,
         CardGridComponent,
         FilledButtonDirective,
         ButtonComponent,
