@@ -3,5 +3,6 @@
        (blur)="onTouched()"
        (input)="onChange($event.target.value)"
        [value]="value"
-       [style.width]="width"
+       [style.width]="width ? width : '100%'"
        name="{{name}}" />
+<span></span>
