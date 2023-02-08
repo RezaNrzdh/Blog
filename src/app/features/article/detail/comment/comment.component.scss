@@ -45,3 +45,22 @@
         }
     }
 }
+
+.yourComment {
+    form{
+        div{
+            margin-bottom: 16px;
+        }
+        .top {
+            grid-area: top;
+        }
+        .bot {
+            grid-area: bot;
+        }
+        display: grid;
+        grid-template-areas:
+            'top top'
+            'bot bot';
+        grid-column-gap: 16px;
+    }
+}

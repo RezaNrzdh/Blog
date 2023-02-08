@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, HostBinding, Input} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
@@ -19,6 +19,7 @@ export class TextboxComponent implements ControlValueAccessor {
     @Input() type!: string;
     @Input() name!: string;
     @Input() width?: string;
+    @HostBinding()
 
     value!: string;
     onChange!: (value: any) => void;
