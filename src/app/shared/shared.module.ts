@@ -41,7 +41,8 @@ import {TextareaComponent} from "./components/textarea/textarea.component";
         FilledButtonDirective,
         ButtonComponent,
         CalendarPipe,
-        AlertComponent
+        AlertComponent,
+        TextareaComponent
     ]
 })
 export class SharedModule{}
