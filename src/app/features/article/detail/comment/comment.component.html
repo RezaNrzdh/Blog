@@ -36,7 +36,8 @@
             <span *ngIf="commentForm.get('email').invalid && commentForm.get('email').touched">لطفا ایمیل خود را وارد کنید</span>
         </div>
         <div class="bot">
-            <blog-textbox type="text" title="نظر شما" name="comment" formControlName="comment"></blog-textbox>
+            <!--<blog-textbox type="text" title="نظر شما" name="comment" formControlName="comment"></blog-textbox>-->
+            <blog-textarea [rows]="7" [placeholder]="'نظر خود را بنویسید'" [title]="'نظر شما'" formControlName="comment"></blog-textarea>
             <span *ngIf="commentForm.get('comment').invalid && commentForm.get('comment').touched">لطفا نظر خود را وارد کنید</span>
         </div>
         <button filled-button type="submit">ارسال نظر</button>

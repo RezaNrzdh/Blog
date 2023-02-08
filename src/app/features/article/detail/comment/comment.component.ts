@@ -14,7 +14,6 @@ export class CommentComponent implements OnInit {
         this.commentForm = new FormGroup({
             "name": new FormControl(null, Validators.required),
             "email": new FormControl(null, [Validators.email, Validators.required]),
-            "phone": new FormControl(null, Validators.required),
             "comment": new FormControl(null, Validators.required)
         })
     }
