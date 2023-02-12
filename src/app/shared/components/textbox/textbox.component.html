@@ -5,4 +5,4 @@
        [value]="value"
        [style.width]="width ? width : '100%'"
        name="{{name}}" />
-<span></span>
+<span *ngIf="formGroup.invalid && formGroup.touched" class="alertmessage">{{ alertmsg[name] }}</span>
