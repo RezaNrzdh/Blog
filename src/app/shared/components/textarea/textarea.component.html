@@ -5,4 +5,4 @@
           [rows]="rows"
           [maxLength]="maxLength"
           [placeholder]="placeholder"></textarea>
-<span></span>
+<span *ngIf="formGroup.invalid && formGroup.touched" class="alertmessage">{{ alertmsg[name] }}</span>
