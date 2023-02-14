@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import { AlertmessageEnum } from "src/app/core/enum/alertmessage.enum";
 
