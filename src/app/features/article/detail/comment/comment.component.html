@@ -28,17 +28,26 @@
 <div class="yourComment">
     <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
         <div>
-            <blog-textbox type="text" title="نام شما" name="name" formControlName="name"></blog-textbox>
-            <span *ngIf="commentForm.get('name').invalid && commentForm.get('name').touched">لطفا نام خود را وارد کنید</span>
+            <blog-textbox type="text"
+                          title="نام شما"
+                          name="name"
+                          [formGroup]="commentForm.get('name')"
+                          formControlName="name"></blog-textbox>
         </div>
         <div>
-            <blog-textbox type="email" title="آدرس ایمیل" name="email" formControlName="email"></blog-textbox>
-            <span *ngIf="commentForm.get('email').invalid && commentForm.get('email').touched">لطفا ایمیل خود را وارد کنید</span>
+            <blog-textbox type="email"
+                          title="آدرس ایمیل"
+                          name="email"
+                          [formGroup]="commentForm.get('email')"
+                          formControlName="email"></blog-textbox>
         </div>
         <div class="bot">
-            <!--<blog-textbox type="text" title="نظر شما" name="comment" formControlName="comment"></blog-textbox>-->
-            <blog-textarea [rows]="7" [placeholder]="'نظر خود را بنویسید'" [title]="'نظر شما'" formControlName="comment"></blog-textarea>
-            <span *ngIf="commentForm.get('comment').invalid && commentForm.get('comment').touched">لطفا نظر خود را وارد کنید</span>
+            <blog-textarea [rows]="7"
+                           placeholder="نظر خود را بنویسید"
+                           title="نظر شما"
+                           name="comment"
+                           [formGroup]="commentForm.get('comment')"
+                           formControlName="comment"></blog-textarea>
         </div>
         <button filled-button type="submit">ارسال نظر</button>
     </form>

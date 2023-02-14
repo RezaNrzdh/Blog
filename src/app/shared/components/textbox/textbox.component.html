@@ -4,5 +4,5 @@
        (input)="onChange($event.target.value)"
        [value]="value"
        [style.width]="width ? width : '100%'"
-       name="{{name}}" />
-<span></span>
+       name="{{name}}" required ngModel/>
+<span *ngIf="formGroup.invalid && formGroup.touched" class="alertmessage">{{ alertmsg[name] }}</span>

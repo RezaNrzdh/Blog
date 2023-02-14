@@ -4,5 +4,5 @@
           [style.width]="width"
           [rows]="rows"
           [maxLength]="maxLength"
-          [placeholder]="placeholder"></textarea>
-<span></span>
+          [placeholder]="placeholder" required ngModel></textarea>
+<span *ngIf="formGroup.invalid && formGroup.touched" class="alertmessage">{{ alertmsg[name] }}</span>

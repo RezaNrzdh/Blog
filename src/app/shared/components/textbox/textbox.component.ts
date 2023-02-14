@@ -1,5 +1,6 @@
-import {Component, HostBinding, Input} from '@angular/core';
+import {Component, Input } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import { AlertmessageEnum } from "src/app/core/enum/alertmessage.enum";
 
 @Component({
     selector: 'blog-textbox',
@@ -19,11 +20,12 @@ export class TextboxComponent implements ControlValueAccessor {
     @Input() type!: string;
     @Input() name!: string;
     @Input() width?: string;
-    @HostBinding()
+    @Input() formGroup!: any;
 
     value!: string;
     onChange!: (value: any) => void;
     onTouched!: () => void;
+    alertmsg: any = AlertmessageEnum;
 
     constructor() {
     }
