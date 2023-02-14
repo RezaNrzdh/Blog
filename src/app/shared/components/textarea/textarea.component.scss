@@ -18,6 +18,9 @@ textarea{
         border-color: $danger-main;
     }
 }
+textarea.ng-invalid.ng-touched {
+    border-color: $danger-main;
+}
 .alertmessage {
     font-size: 12px;
     margin-top: 2px;
