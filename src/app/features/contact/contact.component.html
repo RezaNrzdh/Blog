@@ -6,7 +6,7 @@
 </section>
 <div class="content">
     <div class="formContainer">
-        <div *ngIf="showAlert" blog-alert [state]="'alertDanger'" class="margin-bot-m">پیغام شما با موفقیت ارسال شد.</div>
+        <blog-alert *ngIf="showAlert" [status]="status" class="margin-bot-m">پیغام شما با موفقیت ارسال شد.</blog-alert>
         <form (ngSubmit)="onSubmit(form)" #form="ngForm">
             <div class="margin-bot-m">
                 <blog-textbox type="text"
@@ -36,7 +36,10 @@
                                [formGroup]="message"
                                ngModel></blog-textarea>
             </div>
-            <button type="submit" [disabled]="form.invalid || form.untouched " class="margin-top-l margin-bot-xl">ارسال نظر</button>
+            <button blog-button
+                    type="submit"
+                    [disabled]="form.invalid || form.untouched "
+                    class="margin-top-l margin-bot-xl filledButton">ارسال نظر</button>
         </form>
 <!--        <form (ngSubmit)="onSubmit(form)" #form="ngForm">-->
 <!--            <div class="textboxContainer margin-bot-m">-->

@@ -38,11 +38,11 @@
     padding: 0 16px;
     border-radius: 20px;
     border: none;
-    color: $text-contrast;
     box-sizing: border-box;
     transition: all ease-in-out 0.3s;
-    background-color: $primary-main;
     font-size: 14px;
+    color: $text-contrast;
+    background-color: $primary-main;
     &:hover{
         background-color: $text-main;
     }
@@ -55,12 +55,12 @@
     padding: 0 16px;
     border-radius: 20px;
     border: none;
-    color: $text-variant;
     box-sizing: border-box;
     transition: all ease-in-out 0.3s;
-    background-color: $stroke-main;
     font-size: 14px;
     cursor: default !important;
+    color: $text-variant;
+    background-color: $stroke-main;
 }
 
 @mixin OutlinedButton {

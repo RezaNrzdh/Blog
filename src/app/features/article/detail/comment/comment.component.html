@@ -49,6 +49,9 @@
                            [formGroup]="commentForm.get('comment')"
                            formControlName="comment"></blog-textarea>
         </div>
-        <button filled-button type="submit">ارسال نظر</button>
+        <button type="submit"
+                blog-button
+                class="roundedButton margin-bot-l"
+                [disabled]="commentForm.untouched || commentForm.invalid">ارسال نظر</button>
     </form>
 </div>

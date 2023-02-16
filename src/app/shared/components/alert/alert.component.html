@@ -1,2 +1,9 @@
-<span></span>
+<span *ngIf="status == 200; else alt">
+    <img src="/assets/icons/tick-circle.svg" />
+</span>
+<ng-template #alt>
+    <span>
+        <img src="/assets/icons/danger.svg" />
+    </span>
+</ng-template>
 <ng-content></ng-content>
