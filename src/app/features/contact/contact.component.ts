@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
 
     response: { doc?: ContactModel, status?: number } | undefined;
     showAlert: boolean = false;
+    status?: number;
 
     constructor(private contentService: ContactService) { }
 
@@ -22,6 +23,7 @@ export class ContactComponent implements OnInit {
         this.contentService.createNewMessage(form.value).subscribe((res:{doc?: ContactModel, status?: number}) => {
             this.response = res;
             this.showAlert = true;
+            this.status = res.status;
         });
         form.onReset();
     }

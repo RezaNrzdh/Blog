@@ -1,5 +1,6 @@
 @import '/src/assets/styles/variables';
 @import '/src/assets/styles/color';
+@import '/src/assets/styles/buttons';
 
 :host{
     display: flex;
@@ -7,17 +8,56 @@
     justify-content: center;
     height: 40px;
     padding: 0 16px;
-    border-radius: 20px;
     border: none;
-    color: $text-contrast;
     box-sizing: border-box;
     transition: all ease-in-out 0.3s;
-    background-color: $primary-main;
     font-size: 14px;
-    &:hover{
+}
+
+:host.filledButton:not([disabled]) {
+    color: $text-contrast;
+    background-color: $primary-main;
+    &:hover {
         background-color: $text-main;
     }
-    .primary{
+}
 
+:host.outlinedButton:not([disabled]) {
+    color: $text-variant;
+    border: 1px solid $stroke-main;
+    background-color: transparent;
+    &:hover {
+        color: $text-contrast;
+        background-color: $primary-main;
+        border-color: $primary-main;
+    }
+}
+
+:host.ghostButton:not([disabled]) {
+    color: $text-main;
+    background-color: transparent;
+    &:hover {
+        color: $primary-main;
+        background-color: $primary-light;
+    }
+}
+
+:host.roundedButton {
+    border-radius: 20px;
+}
+
+:host[disabled] {
+    cursor: default !important;
+    color: $text-variant;
+    &.filledButton {
+        background-color: $stroke-main;
+    }
+    &.outlinedButton {
+        border: 1px solid $stroke-main;
+        background-color: transparent;
+    }
+    &.ghostButton {
+        color: $text-variant;
+        background-color: transparent;
     }
 }
