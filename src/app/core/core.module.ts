@@ -4,13 +4,15 @@ import { ArticleService } from "./services/article.service";
 import { ContactService } from "./services/contact.service";
 import { HomeService } from "./services/home.service";
 import {AboutService} from "./services/about.service";
+import {SubscribeService} from "./services/subscribe.service";
 
 @NgModule({
     providers: [
         HomeService,
         ArticleService,
         ContactService,
-        AboutService
+        AboutService,
+        SubscribeService
     ],
     imports: [
         HttpClientModule

@@ -1,4 +1,7 @@
 import {Component, OnInit} from "@angular/core";
+import {AlertmessageEnum} from "src/app/core/enum/alertmessage.enum";
+import {SubscribeService} from "../../../../core/services/subscribe.service";
+import {SubscribeModel} from "../../../../core/models/subscribe.model";
 
 @Component({
     selector: "home-newsletter",
@@ -7,9 +10,20 @@ import {Component, OnInit} from "@angular/core";
 })
 export class NewsletterComponent implements OnInit {
 
-    constructor() {
+    placeholder: AlertmessageEnum = AlertmessageEnum.email;
+
+    constructor(private subscribeService: SubscribeService) {
     }
 
     ngOnInit(): void {
+    }
+
+    onSendSubscribe = (event: HTMLInputElement) => {
+        this.subscribeService.createSubscribe(event.value).subscribe({
+            next: ((value:SubscribeModel) => {
+                console.log(value);
+            }),
+            error: ((err: any) => { console.log(err) })
+        })
     }
 }
