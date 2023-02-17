@@ -19,11 +19,14 @@ export class NewsletterComponent implements OnInit {
     }
 
     onSendSubscribe = (event: HTMLInputElement) => {
-        this.subscribeService.createSubscribe(event.value).subscribe({
-            next: ((value:SubscribeModel) => {
-                console.log(value);
-            }),
-            error: ((err: any) => { console.log(err) })
-        })
+        if(event.value !== ""){
+            this.subscribeService.createSubscribe(event.value).subscribe({
+                next: ((value:SubscribeModel) => {
+                    console.log(value);
+                }),
+                error: ((err: any) => { console.log(err) })
+            });
+        }
+
     }
 }
