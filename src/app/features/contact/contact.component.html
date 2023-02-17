@@ -6,7 +6,7 @@
 </section>
 <div class="content">
     <div class="formContainer">
-        <blog-alert *ngIf="showAlert" [status]="status" class="margin-bot-m">پیغام شما با موفقیت ارسال شد.</blog-alert>
+        <blog-alert *ngIf="showAlert" [status]="status" class="margin-bot-m">{{ alertMessage }}</blog-alert>
         <form (ngSubmit)="onSubmit(form)" #form="ngForm">
             <div class="margin-bot-m">
                 <blog-textbox type="text"
@@ -41,27 +41,11 @@
                     [disabled]="form.invalid || form.untouched "
                     class="margin-top-l margin-bot-xl filledButton">ارسال نظر</button>
         </form>
-<!--        <form (ngSubmit)="onSubmit(form)" #form="ngForm">-->
-<!--            <div class="textboxContainer margin-bot-m">-->
-<!--                <label>نام شما</label>-->
-<!--                <input type="text" name="name" ngModel required #name="ngModel">-->
-<!--                <span *ngIf="name.invalid && name.touched" class="alertmessage">لطفا نام خود را وارد کنید.</span>-->
-<!--            </div>-->
-<!--            <div class="textboxContainer">-->
-<!--                <label>آدرس ایمیل</label>-->
-<!--                <input type="email" name="email" ngModel required email #email="ngModel"/>-->
-<!--                <span *ngIf="email.invalid && email.touched" class="alertmessage">لطفا ایمیل خود را وارد کنید.</span>-->
-<!--            </div>-->
-<!--            <div class="textboxContainer bot">-->
-<!--                <label>نظر شما</label>-->
-<!--                <textarea rows="7" maxlength="300" name="message" ngModel required #msg="ngModel"></textarea>-->
-<!--                <span *ngIf="msg.invalid && msg.touched" class="alertmessage">لطفا نظر خود را بنویسید.</span>-->
-<!--            </div>-->
-<!--            <button type="submit" [disabled]="form.invalid || form.untouched " class="margin-top-l margin-bot-xl">ارسال نظر</button>-->
-<!--        </form>-->
     </div>
     <div class="map">
-        <img src="/assets/images/map.png" alt="map" />
+        <a target="_blank" href="https://www.google.com/maps/place/227+Livingston+St,+Brooklyn,+NY+11201,+USA/@40.6897431,-73.9872384,17z/data=!4m6!3m5!1s0x89c25a4cece979e1:0xbf6901a1b12a16cc!8m2!3d40.6897431!4d-73.9850497!16s%2Fg%2F11b8v4qd5z">
+            <img src="/assets/images/map.png" alt="map" />
+        </a>
         <div class="mapInfo">
             <div>
                 <img src="/assets/icons/email.svg" alt="email" />
@@ -76,7 +60,7 @@
             <div>
                 <img src="/assets/icons/location.svg" alt="location" />
                 <span class="key">آدرس:</span>
-                <span class="value">نیویورک، بروکلین، خیابان پلیموث 10، برج آلفابت، طبقه 17، واحد 68 </span>
+                <span class="value">نیویورک، بروکلین، لیوینگ استون ، ساختمان 227، طبقه 17، واحد 68 </span>
             </div>
         </div>
     </div>
