@@ -1,26 +1,18 @@
-<div class="comments">
+<div *ngIf="comments.length > 0" class="comments">
     <h2>نظرات کاربران</h2>
-    <div class="comment">
+    <div *ngFor="let cm of comments" class="comment">
         <div class="img">
             <img src="./assets/images/avatar.png" alt="avatar" />
         </div>
         <div class="desc">
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+            <p>{{ cm.comment }}</p>
             <div class="author">
-                <a>RezaNrzdh</a>
-                <span>{{ 1674627467935 | persianCalendar }}</span>
-            </div>
-        </div>
-    </div>
-    <div class="comment">
-        <div class="img">
-            <img src="./assets/images/avatar.png" alt="avatar" />
-        </div>
-        <div class="desc">
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-            <div class="author">
-                <a>RezaNrzdh</a>
-                <span>{{ 1674627467935 | persianCalendar }}</span>
+                <span class="authorName">{{cm.name}}</span>
+                <span class="authorCreated">{{ cm.created | persianCalendar }}</span>
+                <div class="replyButton">
+                    <img src="/assets/icons/message.svg" alt="reply" />
+                    <a>پاسخ</a>
+                </div>
             </div>
         </div>
     </div>
