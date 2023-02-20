@@ -15,5 +15,5 @@
     <div class="tags">
         <blog-chips *ngFor="let chip of article.tags">{{chip}}</blog-chips>
     </div>
-    <article-comment></article-comment>
+    <article-comment [aid]="article._id" [comments]="article.comments"></article-comment>
 </div>

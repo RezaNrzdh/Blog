@@ -2,7 +2,7 @@ export class ArticleModel {
     public _id?: number;
     public title?: string;
     public slug?: string;
-    public img?: Array<string>;
+    public img?: Array<string> = [];
     public desc?: string;
     public duration?: number;
     public author?: string;
@@ -10,5 +10,6 @@ export class ArticleModel {
     public editorpicked?: boolean;
     public visit?: number;
     public created?: number;
+    public comments?: Array<Object> = [];
     public __v?: number;
 }

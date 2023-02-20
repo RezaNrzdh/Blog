@@ -31,15 +31,28 @@
                 display: flex;
                 direction: rtl;
                 margin-top: 12px;
-                a{
+                span.authorName{
                     font-size: $body2;
                     color: $text-main;
                     font-weight: bold;
                 }
-                span{
+                span.authorCreated{
                     margin-right: 16px;
+                    margin-left: 16px;
                     font-size: $body2;
                     color: $text-variant;
+                }
+                .replyButton{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 20px;
+                    }
+                    a{
+                        font-size: $body2;
+                        color: $primary-main;
+                        margin-right: 4px;
+                    }
                 }
             }
         }
