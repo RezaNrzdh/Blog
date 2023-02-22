@@ -13,6 +13,7 @@ import {AlertComponent} from "./components/alert/alert.component";
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {TextareaComponent} from "./components/textarea/textarea.component";
+import {CommentComponent} from "./components/comment/comment.component";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {TextareaComponent} from "./components/textarea/textarea.component";
         FilledButtonDirective,
         ButtonComponent,
         CalendarPipe,
-        AlertComponent
+        AlertComponent,
+        CommentComponent
     ],
     imports: [
         CommonModule,
@@ -42,7 +44,8 @@ import {TextareaComponent} from "./components/textarea/textarea.component";
         ButtonComponent,
         CalendarPipe,
         AlertComponent,
-        TextareaComponent
+        TextareaComponent,
+        CommentComponent
     ]
 })
 export class SharedModule{}

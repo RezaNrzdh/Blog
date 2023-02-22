@@ -4,15 +4,14 @@ import {CommentService} from "../../../../core/services/comment.service";
 
 @Component({
     selector: "article-comment",
-    templateUrl: "./comment.component.html",
-    styleUrls: ["./comment.component.scss"]
+    templateUrl: "./comments.component.html",
+    styleUrls: ["./comments.component.scss"]
 })
-export class CommentComponent implements OnInit {
+export class CommentsComponent implements OnInit {
 
     @Input() aid?: number;
     @Input() comments?: any;
     commentForm: FormGroup | any;
-    openReply: boolean = false;
 
     constructor(private commentService: CommentService) {}
 
@@ -35,9 +34,5 @@ export class CommentComponent implements OnInit {
         });
 
         this.commentForm.reset({});
-    }
-
-    onOpenReply = () => {
-        this.openReply = !this.openReply;
     }
 }

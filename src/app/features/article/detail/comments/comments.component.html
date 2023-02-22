@@ -1,32 +1,6 @@
 <div *ngIf="comments.length > 0" class="comments">
     <h2>نظرات کاربران</h2>
-    <div *ngFor="let cm of comments" class="comment">
-        <div class="commentInfo">
-            <div class="img">
-                <img src="./assets/images/avatar.png" alt="avatar" />
-            </div>
-            <div class="desc">
-                <p>{{ cm.comment }}</p>
-                <div class="author">
-                    <span class="authorName">{{cm.name}}</span>
-                    <span class="authorCreated">{{ cm.created | persianCalendar }}</span>
-                    <div class="replyButton">
-                        <img src="/assets/icons/message.svg" alt="reply" />
-                        <a (click)="onOpenReply()">پاسخ</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div *ngIf="openReply" class="replyForm">
-            <label>name:</label>
-            <input />
-            <label>email:</label>
-            <input />
-            <label>description:</label>
-            <input />
-            <button>submit</button>
-        </div>
-    </div>
+    <blog-comment *ngFor="let cm of comments" [comment]="cm"></blog-comment>
 </div>
 <div class="yourComment">
     <h2>نظر شما</h2>

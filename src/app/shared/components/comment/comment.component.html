@@ -1,0 +1,27 @@
+<div class="comment">
+    <div class="commentInfo">
+        <div class="img">
+            <img src="./assets/images/avatar.png" alt="avatar" />
+        </div>
+        <div class="desc">
+            <p>{{ comment.comment }}</p>
+            <div class="author">
+                <span class="authorName">{{comment.name}}</span>
+                <span class="authorCreated">{{ comment.created | persianCalendar }}</span>
+                <div class="replyButton">
+                    <img src="/assets/icons/message.svg" alt="reply" />
+                    <a (click)="onOpenReply()">پاسخ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="openReply" class="replyForm">
+        <label>name:</label>
+        <input />
+        <label>email:</label>
+        <input />
+        <label>description:</label>
+        <input />
+        <button>submit</button>
+    </div>
+</div>
