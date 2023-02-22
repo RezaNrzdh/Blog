@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ReplyService} from "../../../core/services/reply.service";
 
 @Component({
     selector: "blog-comment",
@@ -12,6 +13,9 @@ export class CommentComponent implements OnInit {
     replyForm: FormGroup | any;
     openReply: boolean = false;
 
+    constructor(private replyService: ReplyService) {
+    }
+
     ngOnInit() {
         this.replyForm = new FormGroup({
             "name": new FormControl(null, Validators.required),
@@ -23,6 +27,11 @@ export class CommentComponent implements OnInit {
     onSubmit() {
         this.replyForm.value["id"] = this.comment._id;
         console.log(this.replyForm.value);
+
+        this.replyService.createReply(this.replyForm.value).subscribe({
+            next: ((value: any) => {}),
+            error: ((err: any) => { console.log(err) })
+        });
     }
 
     onOpenReply() {

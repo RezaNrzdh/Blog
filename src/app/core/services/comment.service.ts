@@ -9,8 +9,4 @@ export class CommentService {
     createComment = (body: any) => {
         return this.http.patch("http://localhost:3001/api/v1/comment", body);
     }
-
-    getComments = () => {
-        
-    }
 }
