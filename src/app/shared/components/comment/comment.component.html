@@ -1,0 +1,48 @@
+<div class="comment">
+    <div class="commentInfo">
+        <div class="img">
+            <img src="./assets/images/avatar.png" alt="avatar" />
+        </div>
+        <div class="desc">
+            <p>{{ comment.comment }}</p>
+            <div class="author">
+                <span class="authorName">{{comment.name}}</span>
+                <span class="authorCreated">{{ comment.created | persianCalendar }}</span>
+                <div class="replyButton">
+                    <img src="/assets/icons/message.svg" alt="reply" />
+                    <a (click)="onOpenReply()">پاسخ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="openReply" class="replyForm">
+        <form [formGroup]="replyForm" (ngSubmit)="onSubmit()">
+            <div>
+                <blog-textbox type="text"
+                              title="نام شما"
+                              name="name"
+                              [formGroup]="replyForm.get('name')"
+                              formControlName="name"></blog-textbox>
+            </div>
+            <div>
+                <blog-textbox type="email"
+                              title="آدرس ایمیل"
+                              name="email"
+                              [formGroup]="replyForm.get('email')"
+                              formControlName="email"></blog-textbox>
+            </div>
+            <div class="bot">
+                <blog-textarea [rows]="4"
+                               placeholder="نظر خود را بنویسید"
+                               title="نظر شما"
+                               name="comment"
+                               [formGroup]="replyForm.get('comment')" formControlName="comment"></blog-textarea>
+            </div>
+            <button type="submit"
+                    width="96px"
+                    blog-button
+                    [disabled]="replyForm.untouched || replyForm.invalid"
+                    class="filledButton roundedButton">ارسال نظر</button>
+        </form>
+    </div>
+</div>

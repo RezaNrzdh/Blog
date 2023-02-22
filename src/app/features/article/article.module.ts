@@ -8,7 +8,7 @@ import {ArticleListComponent} from "./list/article-list.component";
 import {ArticleDetailComponent} from "./detail/article-detail.component";
 import {SideComponent} from "./detail/side/side.component";
 import {MainComponent} from "./detail/main/main.component";
-import {CommentComponent} from "./detail/comment/comment.component";
+import {CommentsComponent} from "./detail/comments/comments.component";
 
 @NgModule({
     declarations: [
@@ -16,7 +16,7 @@ import {CommentComponent} from "./detail/comment/comment.component";
         ArticleDetailComponent,
         SideComponent,
         MainComponent,
-        CommentComponent
+        CommentsComponent
     ],
     imports: [
         CommonModule,
