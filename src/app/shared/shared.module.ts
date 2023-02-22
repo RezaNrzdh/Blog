@@ -11,7 +11,7 @@ import { FilledButtonDirective } from "./directives/filled-button.directive";
 import { CalendarPipe } from "./pipes/calendar.pipe";
 import {AlertComponent} from "./components/alert/alert.component";
 import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TextareaComponent} from "./components/textarea/textarea.component";
 import {CommentComponent} from "./components/comment/comment.component";
 
@@ -32,6 +32,7 @@ import {CommentComponent} from "./components/comment/comment.component";
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         RouterModule
     ],
     exports: [

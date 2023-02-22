@@ -16,12 +16,33 @@
         </div>
     </div>
     <div *ngIf="openReply" class="replyForm">
-        <label>name:</label>
-        <input />
-        <label>email:</label>
-        <input />
-        <label>description:</label>
-        <input />
-        <button>submit</button>
+        <form [formGroup]="replyForm" (ngSubmit)="onSubmit()">
+            <div>
+                <blog-textbox type="text"
+                              title="نام شما"
+                              name="name"
+                              [formGroup]="replyForm.get('name')"
+                              formControlName="name"></blog-textbox>
+            </div>
+            <div>
+                <blog-textbox type="email"
+                              title="آدرس ایمیل"
+                              name="email"
+                              [formGroup]="replyForm.get('email')"
+                              formControlName="email"></blog-textbox>
+            </div>
+            <div class="bot">
+                <blog-textarea [rows]="4"
+                               placeholder="نظر خود را بنویسید"
+                               title="نظر شما"
+                               name="comment"
+                               [formGroup]="replyForm.get('comment')" formControlName="comment"></blog-textarea>
+            </div>
+            <button type="submit"
+                    width="96px"
+                    blog-button
+                    [disabled]="replyForm.untouched || replyForm.invalid"
+                    class="filledButton roundedButton">ارسال نظر</button>
+        </form>
     </div>
 </div>
