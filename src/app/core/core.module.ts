@@ -7,6 +7,7 @@ import {AboutService} from "./services/about.service";
 import {SubscribeService} from "./services/subscribe.service";
 import {CommentService} from "./services/comment.service";
 import {ReplyService} from "./services/reply.service";
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
     providers: [
@@ -16,7 +17,8 @@ import {ReplyService} from "./services/reply.service";
         AboutService,
         SubscribeService,
         CommentService,
-        ReplyService
+        ReplyService,
+        AuthService
     ],
     imports: [
         HttpClientModule
