@@ -3,7 +3,7 @@
         <h1>ثبت نام در سایت</h1>
         <div class="textboxContainer">
             <label>ایمیل</label>
-            <input type="email" name="email" maxlength="45" ngModel required #email="ngModel" />
+            <input type="email" name="email" maxlength="45" ngModel required email #email="ngModel" />
         </div>
         <span class="alertmessage" *ngIf="email.invalid && email.touched">لطفا آدرس ایمیل را وارد کنید.</span>
         <div class="textboxContainer passwordContainer">
