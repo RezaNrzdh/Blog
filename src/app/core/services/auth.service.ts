@@ -8,13 +8,15 @@ export class AuthService {
 
     Login = (body: any) => {
         return this.http.post(
-            "http://localhost:3001/api/v1/auth/login", body,
-            { withCredentials: true });
+            "http://localhost:3001/api/v1/auth/login", body);
     }
 
     SignUp = (body: any) => {
         return this.http.post(
-            "http://localhost:3001/api/v1/auth/signup", body,
-            { withCredentials: true });
+            "http://localhost:3001/api/v1/auth/signup", body);
+    }
+
+    verify = () => {
+        return this.http.get("http://localhost:3001/api/v1/auth/verify");
     }
 }

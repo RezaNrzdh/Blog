@@ -37,12 +37,18 @@ header{
         .auth{
             display: flex;
             margin-right: auto;
-            .register{
-                @include OutlinedButton;
+            .loggedIn{
+                display: flex;
             }
-            .login{
-                @include GhostButton;
-                margin-left: 8px;
+            .quest {
+                display: flex;
+                .register{
+                    @include OutlinedButton;
+                }
+                .login{
+                    @include GhostButton;
+                    margin-left: 8px;
+                }
             }
         }
     }

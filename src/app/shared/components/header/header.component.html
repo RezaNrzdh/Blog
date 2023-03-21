@@ -10,8 +10,11 @@
             </ul>
         </nav>
         <div class="auth">
-            <a routerLink="/login" class="login">ورود</a>
-            <a routerLink="/register" class="register">عضویت</a>
+            <div *ngIf="" class="loggedIn"></div>
+            <div class="quest">
+                <a routerLink="/login" class="login">ورود</a>
+                <a routerLink="/register" class="register">عضویت</a>
+            </div>
         </div>
     </section>
 </header>
