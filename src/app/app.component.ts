@@ -17,8 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
       this.authService.verify().subscribe({
           next: ((value: any) => {
-              this.userService.userinfo = value;
-              console.log(this.userService.userinfo);
+              if(value) this.userService.userinfo.next(value);
           }),
           error: ((err: any) => {
               console.log(err);

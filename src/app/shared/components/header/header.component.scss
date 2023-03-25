@@ -39,6 +39,27 @@ header{
             margin-right: auto;
             .loggedIn{
                 display: flex;
+                align-items: center;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                }
+                > div {
+                    display: flex;
+                    flex-direction: column;
+                    padding-right: 12px;
+                    span{
+                        color: $text-variant;
+                    }
+                    button {
+                        color: $primary-main;
+                        background-color: transparent;
+                        border: none;
+                        padding: 0;
+                        width: fit-content;
+                    }
+                }
             }
             .quest {
                 display: flex;

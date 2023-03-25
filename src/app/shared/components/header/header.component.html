@@ -1,6 +1,6 @@
 <header>
     <section>
-        <div class="logo"><img src="/assets/icons/logo.svg" height="32px" /></div>
+        <div class="logo"><img src="/assets/icons/logo.svg" height="32px" alt="logo" /></div>
         <nav>
             <ul>
                 <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">صفحه اصلی</a></li>
@@ -10,8 +10,14 @@
             </ul>
         </nav>
         <div class="auth">
-            <div *ngIf="" class="loggedIn"></div>
-            <div class="quest">
+            <div *ngIf="isLoggedIn" class="loggedIn">
+                <img src="/assets/images/avatar.png" alt="avatar"/>
+                <div>
+                    <span>{{ UserInfo.name }}</span>
+                    <button (click)="Logout()">خروج</button>
+                </div>
+            </div>
+            <div *ngIf="!isLoggedIn" class="quest">
                 <a routerLink="/login" class="login">ورود</a>
                 <a routerLink="/register" class="register">عضویت</a>
             </div>
