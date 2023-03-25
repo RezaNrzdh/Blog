@@ -4,6 +4,7 @@
 </div>
 <div class="yourComment">
     <h2>نظر شما</h2>
+    <blog-alert *ngIf="showAlert" [status]="status">{{ alertMessage }}</blog-alert>
     <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
         <div>
             <blog-textbox type="text"
