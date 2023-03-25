@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
 
 @Injectable()
 export class AuthService {
@@ -8,15 +9,15 @@ export class AuthService {
 
     Login = (body: any) => {
         return this.http.post(
-            "http://localhost:3001/api/v1/auth/login", body);
+            environment.server + "api/v1/auth/login", body);
     }
 
     SignUp = (body: any) => {
         return this.http.post(
-            "http://localhost:3001/api/v1/auth/signup", body);
+            environment.server + "api/v1/auth/signup", body);
     }
 
     verify = () => {
-        return this.http.get("http://localhost:3001/api/v1/auth/verify");
+        return this.http.get(environment.server + "api/v1/auth/verify");
     }
 }
