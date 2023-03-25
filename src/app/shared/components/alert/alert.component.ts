@@ -11,7 +11,7 @@ export class AlertComponent implements  OnInit{
     @HostBinding('class.alert-danger') danger?: boolean = false;
 
     ngOnInit() {
-        if(this.status == 200) {
+        if(this.status == 201) {
             this.success = true;
         }
         else {

@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit {
 
             this.showAlert = true;
             this.status = res.status;
-            if(this.status === 200) {
+            if(this.status === 201) {
                 this.alertMessage = AlertmessageEnum.contactUsSuccess;
             }
             else{
