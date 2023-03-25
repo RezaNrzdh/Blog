@@ -8,6 +8,7 @@ import { NewestComponent } from './components/newest/newest.component';
 import { PickedComponent } from './components/picked/picked.component';
 import { RecentComponent } from './components/recent/recent.component';
 import { NewsletterComponent } from "./components/newsletter/newsletter.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { NewsletterComponent } from "./components/newsletter/newsletter.componen
     imports: [
         CommonModule,
         SharedModule,
-        HomeRoutingModule
+        HomeRoutingModule,
+        FormsModule
     ],
     exports: [
         NewsletterComponent

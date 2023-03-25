@@ -7,9 +7,10 @@
             </div>
             <h4>خبرنامه هفده</h4>
             <div class="action">
-                <input #emailAddress [placeholder]="placeholder" />
-                <button (click)="onSendSubscribe(emailAddress)">اشتراک</button>
+                <input #emailAddress [(ngModel)]="content" [placeholder]="placeholder" />
+                <button [disabled]="!content" (click)="onSendSubscribe(emailAddress)">اشتراک</button>
             </div>
+            <span *ngIf="isSubmit" class="status">{{submitSuccessAlert}}</span>
         </div>
         <img height="200" src="/assets/images/newsletter.png" alt="subscribeShape" />
     </div>

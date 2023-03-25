@@ -56,6 +56,16 @@
                     padding: 0 24px;
                     margin-right: 16px;
                 }
+                button[disabled]{
+                    cursor: default !important;
+                    background-color: $stroke-main;
+                    color: $text-variant;
+                }
+            }
+            .status{
+                color: $success-main;
+                font-size: 14px;
+                margin: 4px 16px 0 0;
             }
         }
         > img {

@@ -11,6 +11,9 @@ import {SubscribeModel} from "../../../../core/models/subscribe.model";
 export class NewsletterComponent {
 
     placeholder: AlertmessageEnum = AlertmessageEnum.email;
+    content: string = "";
+    isSubmit: boolean = false;
+    submitSuccessAlert: AlertmessageEnum = AlertmessageEnum.newsletterSuccess;
 
     constructor(private subscribeService: SubscribeService) {
     }
@@ -19,7 +22,8 @@ export class NewsletterComponent {
         if(event.value !== ""){
             this.subscribeService.createSubscribe(event.value).subscribe({
                 next: ((value:SubscribeModel) => {
-                    console.log(value);
+                    this.content = "";
+                    this.isSubmit = true;
                 }),
                 error: ((err: any) => { console.log(err) })
             });
