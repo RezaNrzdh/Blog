@@ -1,9 +1,9 @@
 <div class="main">
     <span>{{ article.created | persianCalendar }}</span>
     <h1>{{ article.title }}</h1>
-    <img src="/assets/images/{{ article.img }}" />
+    <img src="/assets/images/{{ article.img }}" alt="articleImage" />
     <div class="author">
-        <img src="/assets/images/author.jpg" />
+        <img src="/assets/images/author.jpg" alt="author" />
         <span>{{ article.author }} - زمان مطالعه: {{ article.duration }} دقیقه</span>
     </div>
     <div class="desc">
@@ -15,5 +15,5 @@
     <div class="tags">
         <blog-chips *ngFor="let chip of article.tags">{{chip}}</blog-chips>
     </div>
-    <article-comment [aid]="article._id" [comments]="article.comments"></article-comment>
+    <article-comment [aid]="article._id" [comments]="article.comments"  (output)="getUpdatedArticles()"></article-comment>
 </div>

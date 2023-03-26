@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ReplyService} from "../../../core/services/reply.service";
 
@@ -11,6 +11,8 @@ export class CommentComponent implements OnInit {
 
     @Input() comment: any;
     @Input() aid?: number;
+    @Output() output = new EventEmitter<boolean>();
+
     replyForm: FormGroup | any;
     openReply: boolean = false;
 
@@ -31,7 +33,7 @@ export class CommentComponent implements OnInit {
 
         this.replyService.createReply(this.replyForm.value).subscribe({
             next: ((value: any) => {
-                console.log(value);
+                this.output.emit(true);
             }),
             error: ((err: any) => { console.log(err) })
         });

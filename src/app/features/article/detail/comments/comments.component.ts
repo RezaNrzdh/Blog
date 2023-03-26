@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {FormGroup, FormControl, Validators} from "@angular/forms";
 import {CommentService} from "../../../../core/services/comment.service";
 import {AlertmessageEnum} from "../../../../core/enum/alertmessage.enum";
@@ -12,6 +12,8 @@ export class CommentsComponent implements OnInit {
 
     @Input() aid?: number;
     @Input() comments?: any;
+    @Output() output = new EventEmitter<boolean>();
+
     commentForm: FormGroup | any;
     status?: number;
     showAlert: boolean = false;
@@ -36,6 +38,7 @@ export class CommentsComponent implements OnInit {
                     this.alertMessage = AlertmessageEnum.contactUsSuccess;
                     this.showAlert = true;
                     this.status = value.status;
+                    this.output.emit(true);
                 }
                 else{
                     this.alertMessage = AlertmessageEnum.contactUsError;
@@ -47,5 +50,9 @@ export class CommentsComponent implements OnInit {
         });
 
         this.commentForm.reset({});
+    }
+
+    UpdatePage = () => {
+        this.output.emit(true);
     }
 }

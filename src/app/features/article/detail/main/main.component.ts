@@ -31,4 +31,13 @@ export class MainComponent implements OnInit {
             });
         });
     }
+
+    getUpdatedArticles = () => {
+        this.articleService.getArticle(this.route.snapshot.params['slug']).subscribe({
+            next: ((value: ArticleModel) => {
+                this.article = value;
+            }),
+            error: ((err: any) => { console.log(err) })
+        })
+    }
 }
