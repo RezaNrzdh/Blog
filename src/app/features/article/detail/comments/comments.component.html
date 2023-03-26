@@ -1,6 +1,6 @@
 <div *ngIf="comments.length > 0" class="comments">
     <h2>نظرات کاربران</h2>
-    <blog-comment *ngFor="let cm of comments" [comment]="cm"></blog-comment>
+    <blog-comment *ngFor="let cm of comments" [comment]="cm" [aid]="aid"></blog-comment>
 </div>
 <div class="yourComment">
     <h2>نظر شما</h2>

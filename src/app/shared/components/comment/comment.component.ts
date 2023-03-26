@@ -10,6 +10,7 @@ import {ReplyService} from "../../../core/services/reply.service";
 export class CommentComponent implements OnInit {
 
     @Input() comment: any;
+    @Input() aid?: number;
     replyForm: FormGroup | any;
     openReply: boolean = false;
 
@@ -26,10 +27,12 @@ export class CommentComponent implements OnInit {
 
     onSubmit() {
         this.replyForm.value["id"] = this.comment._id;
-        console.log(this.replyForm.value);
+        this.replyForm.value["postId"] = this.aid;
 
         this.replyService.createReply(this.replyForm.value).subscribe({
-            next: ((value: any) => {}),
+            next: ((value: any) => {
+                console.log(value);
+            }),
             error: ((err: any) => { console.log(err) })
         });
     }

@@ -15,6 +15,18 @@
             </div>
         </div>
     </div>
+    <div *ngFor="let reply of comment.replies" class="replies">
+        <div class="img">
+            <img src="./assets/images/avatar.png" alt="avatar" />
+        </div>
+        <div class="desc">
+            <p>{{ reply.comment }}</p>
+            <div class="author">
+                <span class="authorName">{{reply.name}}</span>
+                <span class="authorCreated">{{ reply.created | persianCalendar }}</span>
+            </div>
+        </div>
+    </div>
     <div *ngIf="openReply" class="replyForm">
         <form [formGroup]="replyForm" (ngSubmit)="onSubmit()">
             <div>
