@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
     showAlert: boolean = false;
     status?: number;
     alertMessage?: string;
+    clear: any;
 
     constructor(private contentService: ContactService) { }
 
@@ -33,6 +34,11 @@ export class ContactComponent implements OnInit {
             else{
                 this.alertMessage = AlertmessageEnum.contactUsError;
             }
+
+            this.clear = setTimeout(() => {
+                this.showAlert = false;
+                clearTimeout(this.clear);
+            }, 3000);
         });
         form.onReset();
     }

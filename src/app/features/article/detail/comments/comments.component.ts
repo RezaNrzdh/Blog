@@ -18,6 +18,7 @@ export class CommentsComponent implements OnInit {
     status?: number;
     showAlert: boolean = false;
     alertMessage?: string;
+    clear: any;
 
     constructor(private commentService: CommentService) {}
 
@@ -38,7 +39,13 @@ export class CommentsComponent implements OnInit {
                     this.alertMessage = AlertmessageEnum.contactUsSuccess;
                     this.showAlert = true;
                     this.status = value.status;
+
                     this.output.emit(true);
+
+                    this.clear = setTimeout(() => {
+                        this.showAlert = false;
+                        clearTimeout(this.clear);
+                    }, 3000);
                 }
                 else{
                     this.alertMessage = AlertmessageEnum.contactUsError;
@@ -49,10 +56,15 @@ export class CommentsComponent implements OnInit {
             error: ((err) => console.log(err))
         });
 
-        this.commentForm.reset({});
+        this.commentForm.reset({
+            name: "",
+            email: "",
+            comment: ""
+        });
     }
 
     UpdatePage = () => {
         this.output.emit(true);
     }
+
 }
