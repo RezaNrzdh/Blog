@@ -10,15 +10,12 @@ import {ArticleModel} from "../../../../core/models/article.model";
 export class RecentComponent implements OnInit {
     popular: any = [];
     latest: any = [];
-    isLoading: boolean = false;
 
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
-        this.isLoading = true;
         this.homeService.getLatestArticle().subscribe( (res:ArticleModel) => {
             this.latest = res;
-            this.isLoading = false;
         });
         
         this.homeService.getPopularArticles().subscribe( (res:ArticleModel) => {

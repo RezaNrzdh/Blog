@@ -9,15 +9,12 @@ import { ArticleModel } from 'src/app/core/models/article.model';
 })
 export class PickedComponent implements OnInit {
     editorPicked: any;
-    isLoading: boolean = false;
     
     constructor(private homeService: HomeService){}
 
     ngOnInit(): void {
-        this.isLoading = true;
         this.homeService.getEditorPicked().subscribe((res:ArticleModel) => {
                 this.editorPicked = res;
-                this.isLoading = false;
             }
         );
     }
