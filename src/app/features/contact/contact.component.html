@@ -6,9 +6,9 @@
 </section>
 <div class="content">
     <div class="formContainer">
-        <blog-alert *ngIf="showAlert" [status]="status" class="margin-bot-m">{{ alertMessage }}</blog-alert>
+        <blog-alert *ngIf="showAlert" [status]="status" class="margin-bot-16">{{ alertMessage }}</blog-alert>
         <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <div class="margin-bot-m">
+            <div class="margin-bot-16">
                 <blog-textbox type="text"
                               title="نام شما"
                               name="name"
@@ -40,7 +40,7 @@
             <button blog-button
                     type="submit"
                     [disabled]="form.invalid || form.untouched "
-                    class="margin-top-l margin-bot-xl filledButton">ارسال نظر</button>
+                    class="margin-top-24 margin-bot-32 filledButton">ارسال نظر</button>
         </form>
     </div>
     <div class="map">

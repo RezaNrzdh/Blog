@@ -10,7 +10,7 @@ import {ArticleModel} from "../../../../core/models/article.model";
 export class NewestComponent implements OnInit {
     lastone: ArticleModel = new ArticleModel;
     others: any = [];
-    loading: boolean = false;
+    isLoading: boolean = false;
 
     constructor(private homeService: HomeService){
     }
@@ -18,11 +18,11 @@ export class NewestComponent implements OnInit {
     ngOnInit(): void {
 
         let arr: ArticleModel[];
-        this.loading = true;
+        this.isLoading = true;
 
         this.homeService.getNewestArticle().subscribe({
             next: ((value: ArticleModel[]) => {
-                if(value) this.loading = false;
+                this.isLoading = false;
 
                 this.others =  this.others.concat(value);
                 this.lastone = this.others.shift();
